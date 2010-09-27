@@ -1,4 +1,4 @@
-# .ircrc
+# .irbrc
 
 ARGV.concat ['--readline']
 
