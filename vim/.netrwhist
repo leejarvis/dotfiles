@@ -1,7 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/home/injekt/code/rdbi-driver-postgresql'
-let g:netrw_dirhist_2='/home/injekt/code/mcwarez/model'
-let g:netrw_dirhist_3='/home/injekt/.rvm/gems/ruby-1.9.2-p0/gems/haml-3.0.18'
-let g:netrw_dirhist_4='/home/injekt/foo/config'
-let g:netrw_dirhist_5='/home/injekt/code/nex/rails'
