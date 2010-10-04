@@ -28,6 +28,12 @@ alias grep='grep --color'
 alias mkdir='mkdir -p'
 alias g='2>/dev/null gvim --servername vroom --remote-tab'
 
+# Git aliases
+alias gp='git pull'
+alias gc='git commit'
+alias gb='git branch'
+alias gs='git s'
+
 # Set PS1 with colour dependant on hostname
 local red="%{"$'\e[1;31m'"%}"
 local green="%{"$'\e[1;32m'"%}"
