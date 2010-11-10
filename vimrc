@@ -1,6 +1,5 @@
 " vimrc 
 
-" bad vi!
 set nocompatible
 
 " continuous indentation
@@ -32,41 +31,22 @@ tab all
 set noerrorbells
 set visualbell
 set t_vb=
-"set foldmethod=syntax  " Enable code folding. (zo opens fold, zc closes fold)
 
 let mapleader=","
 
 " if we're using gvim
 if has("gui_running")
-  set guioptions-=T     " remove gvim toolbar
+  set guioptions-=T
   set lines=48
   set columns=120
-
-  " http://github.com/ryanb/dotfiles/blob/master/vim/colors/railscasts.vim <3
   colorscheme railscasts 
-
-  " ^C+s for saving
-  noremap <C-S> :update<CR>
-  vnoremap <C-S> <C-C>:update<CR>
-  inoremap <C-S> <C-O>:update<CR>
-
-  " NERDTree on ^C+b
-  noremap <C-b> :NERDTreeToggle<CR>
-
-  " Control+W to close a tab
-  map <C-w> :tabclose<CR>
-  " Control+T to open a new tab
-  map <C-t> :tabnew<CR>
-
-endif " endif gui_running
+endif
 
 " In many terminal emulators the mouse works just fine, thus enable it.
 if has('mouse')
   set mouse=a
 endif
 
-" make sure we switch syntax highlighting on if 
-" we have colours! yadaboi
 if &t_Co > 2
   syntax on
 endif
@@ -80,6 +60,9 @@ if has("autocmd")
   " Also load indent files, to automatically do language-dependent indenting
   filetype plugin indent on
 
+  " Set File type to 'text' for files ending in .txt
+  autocmd BufNewFile,BufRead *.txt setfiletype text
+
   " When editing a file, always jump to the last known cursor position.
   " Don't do it when the position is invalid or when inside an event handler
   " (happens when dropping a file on gvim).
@@ -87,4 +70,16 @@ if has("autocmd")
     \ if line("'\"") > 0 && line("'\"") <= line("$") |
     \ exe "normal g`\"" |
     \ endif
+
+  autocmd BufWritePost .vimrc source $MYVIMRC
 endif
+
+" ^C+s for saving
+noremap <C-S> :update<CR>
+vnoremap <C-S> <C-C>:update<CR>
+inoremap <C-S> <C-O>:update<CR>
+
+map <C-b> :NERDTreeToggle<CR>
+
+nmap <F1> <Esc>
+imap <Tab> <C-N>
