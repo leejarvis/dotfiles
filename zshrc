@@ -1,0 +1,2 @@
+. ~/.zsh/config
+. ~/.zsh/aliases

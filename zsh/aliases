@@ -1,0 +1,24 @@
+# cd
+alias ..='cd ..'
+
+# ls
+alias ls="ls --color"
+alias l="ls -lAh"
+alias ll="ls -l"
+alias la='ls -A'
+
+# git
+alias gl='git pull'
+alias gp='git push'
+alias gd='git diff'
+alias gc='git commit'
+alias cm='git commit -am'
+alias gca='git commit -a'
+alias gco='git checkout'
+alias gb='git branch'
+alias gs='git status'
+alias s='git status'
+
+# editing
+alias g='2>/dev/null gvim --servername vroom --remote-tab'
+alias rc='redcar --fork'

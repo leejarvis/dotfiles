@@ -1,0 +1,4 @@
+if [ -s "$HOME/.ssh/config" ]; then
+  hosts=(`hostname` `grep "Host " ~/.ssh/config | cut -d " " -f2`)
+  zstyle '*' hosts $hosts
+fi
