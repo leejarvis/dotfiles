@@ -31,6 +31,8 @@ tab all
 set noerrorbells
 set visualbell
 set t_vb=
+set cursorline
+set nowrap
 
 let mapleader=","
 

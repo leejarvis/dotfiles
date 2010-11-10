@@ -12,13 +12,14 @@ task :update do
       next
     end
 
-    nicefile = "/" + filename.sub(/^./, '')
+    destination = File.expand_path('../' + filename.sub(/^./, ''), __FILE__)
 
     if File.directory?(file)
-      FileUtils.cp_r(file, File.dirname(__FILE__) + nicefile)
+      FileUtils.rm_rf(destination) if File.directory?(destination)
+      FileUtils.cp_r(file, destination)
       puts "Copying directory #{file} .."
     else
-      FileUtils.cp(file, File.dirname(__FILE__) + nicefile)
+      FileUtils.cp(file, destination)
       puts "Copying file #{file} .."
     end
   end
