@@ -36,7 +36,7 @@ task :install do
     if File.exists?(destination)
       print "#{destination} exists.. replace? [Ny]"
       next unless STDIN.gets[0].chr.downcase == 'y'
-      FileUtils.cp_r(file, destination)
     end
+    FileUtils.cp_r(file, destination)
   end
 end
