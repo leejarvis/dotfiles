@@ -28,7 +28,7 @@ end
 desc "Install configuration files into home directory"
 task :install do
   Dir.foreach(File.dirname(__FILE__)) do |filename|
-    next if filename[0].chr == '.'
+    next if filename[0].chr == '.' || filename == "Rakefile"
 
     file = File.expand_path(filename)
     destination = File.join(ENV['HOME'], filename.insert(0, '.'))
