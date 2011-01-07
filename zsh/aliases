@@ -17,8 +17,14 @@ alias gca='git commit -a'
 alias gco='git checkout'
 alias gb='git branch'
 alias gs='git status'
-alias s='git status'
+alias s='git status -s'
 
 # editing
-alias g='2>/dev/null gvim --servername vroom --remote-tab'
+# alias g='2>/dev/null gvim --servername vroom --remote-tab'
+alias g='gvim'
 alias rc='redcar --fork'
+
+# miscellaneous
+alias myip='curl http://whatismyip.org && echo'
+
+alias rbx='$HOME/code/rubinius/bin/rbx'

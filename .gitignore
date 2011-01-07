@@ -2,3 +2,6 @@
 *~
 *swp
 zsh/history
+vim/doc/*tags*
+vim/doc/tags
+vim/.netrwhist

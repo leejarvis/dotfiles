@@ -1,7 +1,6 @@
 snippet main
-	public static void main (String [] args)
-	{
-		${1:/* code */}
+	public static void main(String[] args) {
+		${1}
 	}
 snippet pu
 	public
@@ -25,7 +24,7 @@ snippet de
 snippet ca
 	catch(${1:Exception} ${2:e}) ${3}
 snippet th
-	throw 
+	throw
 snippet sy
 	synchronized
 snippet im
@@ -33,7 +32,7 @@ snippet im
 snippet imp
 	implements
 snippet ext
-	extends 
+	extends
 snippet j.u
 	java.util
 snippet j.i
@@ -47,7 +46,7 @@ snippet j.m
 snippet if
 	if (${1}) ${2}
 snippet el
-	else 
+	else
 snippet elif
 	else if (${1}) ${2}
 snippet wh
@@ -67,7 +66,9 @@ snippet tc
 snippet t
 	public void test${1:Name}() throws Exception ${2}
 snippet cl
-	class ${1:`Filename("", "untitled")`} ${2}
+	class ${1:`Filename("", "untitled")`} {
+		${2}
+	}
 snippet in
 	interface ${1:`Filename("", "untitled")`} ${2:extends Parent}${3}
 snippet m
