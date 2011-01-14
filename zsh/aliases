@@ -27,4 +27,6 @@ alias rc='redcar --fork'
 # miscellaneous
 alias myip='curl http://whatismyip.org && echo'
 
+# ruby implementations
 alias rbx='$HOME/code/rubinius/bin/rbx'
+alias jruby='$HOME/code/jruby/bin/jruby'
