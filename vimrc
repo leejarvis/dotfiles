@@ -27,12 +27,6 @@ set nowrap
 
 let mapleader=","
 
-if has("gui_running")
-  set guioptions-=T
-  set lines=44
-  set columns=120
-endif
-
 colorscheme railscasts
 
 if has('mouse')
