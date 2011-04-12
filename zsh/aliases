@@ -2,31 +2,12 @@
 alias ..='cd ..'
 
 # ls
-alias ls="ls --color"
 alias l="ls -lAh"
 alias ll="ls -l"
 alias la='ls -A'
 
 # git
-alias gl='git log'
-alias gp='git push'
-alias gd='git diff'
-alias gc='git commit'
-alias cm='git commit -am'
-alias gca='git commit -a'
-alias gco='git checkout'
-alias gb='git branch'
-alias gs='git status'
-alias s='git status -s'
-
-# editing
-# alias g='2>/dev/null gvim --servername vroom --remote-tab'
-alias g='gvim'
-alias rc='redcar --fork'
+alias g='git'
 
 # miscellaneous
 alias myip='curl http://whatismyip.org && echo'
-
-# ruby implementations
-alias rbx='$HOME/code/rubinius/bin/rbx'
-alias jruby='$HOME/code/jruby/bin/jruby'

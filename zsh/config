@@ -7,7 +7,8 @@ else
 fi
 
 export EDITOR='vim'
-export PATH="$HOME/bin:$HOME/downloads/android-sdk/tools:$PATH"
+PATH="$HOME/bin:/opt/local/bin:/opt/local/sbin:$PATH"
+export PATH="$HOME/code/android-sdk/tools:$PATH"
 
 # load functions
 fpath=(~/.zsh/functions $fpath)
@@ -30,13 +31,22 @@ setopt HIST_VERIFY
 setopt SHARE_HISTORY
 setopt EXTENDED_HISTORY
 setopt PROMPT_SUBST
-setopt CORRECT
 setopt COMPLETE_IN_WORD
 setopt IGNORE_EOF
 setopt APPEND_HISTORY
 setopt INC_APPEND_HISTORY SHARE_HISTORY
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_REDUCE_BLANKS
+
+# golang
+export GOROOT=$HOME/code/go
+export GOOS=darwin
+export GOARCH=amd64
+export GOBIN=$GOROOT/bin
+export PATH=$GOBIN:$PATH
+
+# jruby
+#export JRUBY_OPTS=--1.9
 
 [[ -s /opt/rvm/scripts/rvm ]] && source /opt/rvm/scripts/rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
