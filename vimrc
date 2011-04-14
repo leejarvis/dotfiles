@@ -59,13 +59,3 @@ if has("autocmd")
 
   autocmd BufWritePost .vimrc source $MYVIMRC
 endif
-
-noremap <C-S> :update<CR>
-vnoremap <C-S> <C-C>:update<CR>
-inoremap <C-S> <C-O>:update<CR>
-
-noremap <C-T> :FuzzyFinderTextMate<CR>
-vnoremap <C-T> <C-C>:FuzzyFinderTextMate<CR>
-inoremap <C-T> <C-O>:FuzzyFinderTextMate<CR>
-
-map <C-B> :NERDTreeToggle<CR>
