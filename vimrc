@@ -41,9 +41,6 @@ endif
 if has("autocmd")
   filetype plugin indent on
 
-  " When editing a file, always jump to the last known cursor position.
-  " Don't do it when the position is invalid or when inside an event handler
-  " (happens when dropping a file on gvim).
   autocmd BufReadPost *
     \ if line("'\"") > 0 && line("'\"") <= line("$") |
     \ exe "normal g`\"" |
@@ -51,3 +48,7 @@ if has("autocmd")
 
   autocmd BufWritePost .vimrc source $MYVIMRC
 endif
+
+" Navigation mappings
+inoremap <D-Enter> <Esc>o
+nnoremap <D-Enter> o
