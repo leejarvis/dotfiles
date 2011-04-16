@@ -27,6 +27,7 @@ set visualbell
 set t_vb=
 set cursorline
 set nowrap
+set shell=/bin/sh
 
 colorscheme railscasts
 
@@ -48,6 +49,15 @@ if has("autocmd")
 
   autocmd BufWritePost .vimrc source $MYVIMRC
 endif
+
+" language specific mkprgs
+au FileType ruby   setl mp=ruby\ %
+au FileType lua    setl mp=lua\ %
+au FileType python setl mp=python\ %
+
+" map cmd+r to make
+inoremap <D-r> <Esc>:make<CR>
+nnoremap <D-r> <Esc>:make<CR>
 
 " Navigation mappings
 inoremap <D-Enter> <Esc>o
