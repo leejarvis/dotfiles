@@ -6,6 +6,13 @@ rescue LoadError
   puts "No awesome_print support (gem install awesome_print)"
 end
 
+begin
+  require 'pry'
+  Pry.start
+  exit
+rescue LoadError
+end
+
 require 'pp'
 require 'irb/completion'
 require 'irb/ext/save-history'
