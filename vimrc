@@ -3,7 +3,6 @@ silent! call pathogen#runtime_append_all_bundles()
 set nocompatible
 set autoindent
 set smartindent
-set showmatch
 set backspace=indent,eol,start
 set nobackup
 set noswapfile
