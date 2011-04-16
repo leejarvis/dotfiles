@@ -1,3 +1,5 @@
+silent! call pathogen#runtime_append_all_bundles()
+
 set nocompatible
 set autoindent
 set smartindent
@@ -14,6 +16,7 @@ set tabstop=2
 set smarttab
 set expandtab
 set autoread
+set autowrite
 set title
 set number
 set nohlsearch
