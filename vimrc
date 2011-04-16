@@ -28,8 +28,6 @@ set t_vb=
 set cursorline
 set nowrap
 
-let mapleader=","
-
 colorscheme railscasts
 
 if has('mouse')
@@ -41,9 +39,6 @@ if &t_Co > 2
 endif
 
 if has("autocmd")
-  " Disable flash
-  autocmd GUIEnter * set vb t_vb=
-
   filetype plugin indent on
 
   " When editing a file, always jump to the last known cursor position.
