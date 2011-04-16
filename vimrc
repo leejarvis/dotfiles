@@ -43,12 +43,6 @@ if has("autocmd")
 
   filetype plugin indent on
 
-  autocmd BufNewFile,BufRead *.txt    setf text
-  autocmd BufNewFile,BufRead *.haml   setf haml
-  autocmd BufNewFile,BufRead *.sass   setf sass
-  autocmd BufNewFile,BufRead *.scss   setf scss
-  autocmd BufNewFile,BufRead *.coffee setf coffee
-
   " When editing a file, always jump to the last known cursor position.
   " Don't do it when the position is invalid or when inside an event handler
   " (happens when dropping a file on gvim).
