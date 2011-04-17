@@ -57,7 +57,7 @@ hi Delimiter guifg=#509E50
 hi Function guifg=#E1DFAB gui=NONE
 
 "@var, @@var, $var
-hi Identifier guifg=#CFCFFF gui=NONE
+hi Identifier guifg=#63D45B gui=NONE
 
 " #if, #else, #endif
 
