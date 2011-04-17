@@ -21,7 +21,7 @@ let g:colors_name = "vague"
 " Tan #FFC66D
 " Red #DA4938
 
-hi Normal guifg=#E6E1DC guibg=#232323
+hi Normal guifg=#E6E1DC guibg=#1C1C1C
 hi Cursor guibg=#FFFFFF
 hi CursorLine guibg=#333435
 hi LineNr guifg=#666666
@@ -41,10 +41,10 @@ hi! link Number String
 hi! link rubyStringDelimiter String
 
 " nil, self, symbols
-hi Constant guifg=#6D9CBD
+hi Constant guifg=#C97D88
 
 " def, end, include, load, require, alias, super, yield, lambda, proc
-hi Define guifg=#CC7733 gui=NONE
+hi Define guifg=#8AB6D3 gui=NONE
 hi! link Include Define
 hi! link Keyword Define
 hi! link Macro Define
@@ -54,7 +54,7 @@ hi Delimiter guifg=#509E50
 " hi erubyDelimiter guifg=NONE
 
 " function name (after def)
-hi Function guifg=#FFC66D gui=NONE
+hi Function guifg=#E1DFAB gui=NONE
 
 "@var, @@var, $var
 hi Identifier guifg=#CFCFFF gui=NONE
@@ -62,7 +62,7 @@ hi Identifier guifg=#CFCFFF gui=NONE
 " #if, #else, #endif
 
 " case, begin, do, for, if, unless, while, until, else
-hi Statement guifg=#CC7733 gui=NONE
+hi Statement guifg=#8AB6D3 gui=NONE
 hi! link PreProc Statement
 hi! link PreCondit Statement
 
