@@ -28,7 +28,7 @@ set cursorline
 set nowrap
 set shell=/bin/sh
 
-colorscheme railscasts
+colorscheme vague
 
 if has('mouse')
   set mouse=a

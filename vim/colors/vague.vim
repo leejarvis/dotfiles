@@ -1,7 +1,7 @@
-" Vim color scheme based on http://github.com/jpo/vim-railscasts-theme
+" Vim color scheme based on the railscast.vim theme by Ryan Bates
 "
-" Name: railscasts.vim
-" Maintainer: Ryan Bates
+" Name: vague.vim
+" Maintainer: Lee Jarvis
 " License: MIT
 
 set background=dark
@@ -9,7 +9,7 @@ hi clear
 if exists("syntax_on")
   syntax reset
 endif
-let g:colors_name = "railscasts"
+let g:colors_name = "vague"
 
 " Colors
 " Brown #BC9357
