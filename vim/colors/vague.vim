@@ -36,7 +36,7 @@ hi Title guifg=#E6E1DC
 hi Comment guifg=#BC9357 guibg=NONE gui=italic
 hi! link Todo Comment
 
-hi String guifg=#A5C160
+hi String guifg=#DCD969
 hi! link Number String
 hi! link rubyStringDelimiter String
 
