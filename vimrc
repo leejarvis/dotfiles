@@ -61,3 +61,7 @@ nnoremap <D-r> <Esc>:make<CR>
 " Navigation mappings
 inoremap <D-Enter> <Esc>o
 nnoremap <D-Enter> o
+
+" NERDTree
+map <C-b> :NERDTreeToggle<CR>
+imap <C-b> <Esc>:NERDTreeToggle<CR>
