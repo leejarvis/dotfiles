@@ -28,7 +28,7 @@ set cursorline
 set nowrap
 set shell=/bin/sh
 
-colorscheme vague
+colorscheme railscasts
 
 if has('mouse')
   set mouse=a
@@ -46,6 +46,7 @@ if has("autocmd")
     \ exe "normal g`\"" |
     \ endif
 
+  autocmd BufWritePre * :%s/\s\+$//e
   autocmd BufWritePost .vimrc source $MYVIMRC
 endif
 
