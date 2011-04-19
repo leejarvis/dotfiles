@@ -52,12 +52,10 @@ endif
 
 " language specific mkprgs
 au FileType ruby   setl mp=ruby\ %
-au FileType lua    setl mp=lua\ %
-au FileType python setl mp=python\ %
 
 " map cmd+r to make
 inoremap <D-r> <Esc>:make<CR>
-nnoremap <D-r> <Esc>:make<CR>
+nnoremap <D-r> :make<CR>
 
 " Navigation mappings
 inoremap <D-Enter> <Esc>o
