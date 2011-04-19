@@ -48,6 +48,8 @@ if has("autocmd")
 
   autocmd BufWritePre * :%s/\s\+$//e
   autocmd BufWritePost .vimrc source $MYVIMRC
+
+  autocmd BufEnter * lcd %:p:h
 endif
 
 " language specific mkprgs
