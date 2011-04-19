@@ -52,7 +52,7 @@ if has("autocmd")
 endif
 
 " language specific mkprgs
-au FileType ruby   setl mp=ruby\ %
+au FileType ruby setl mp=ruby\ %
 
 " map cmd+r to make
 inoremap <D-r> <Esc>:make<CR>
