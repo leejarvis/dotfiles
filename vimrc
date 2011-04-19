@@ -47,7 +47,7 @@ if has("autocmd")
     \ endif
 
   autocmd BufWritePre * :%s/\s\+$//e
-  autocmd BufWritePost .vimrc source $MYVIMRC
+  autocmd BufWritePost vimrc source $MYVIMRC
 
   autocmd BufEnter * lcd %:p:h
 endif
