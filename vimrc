@@ -30,6 +30,9 @@ set shell=/bin/sh
 
 colorscheme railscasts
 
+let g:gist_detect_filetype = 1
+let g:gist_clip_command = 'pbcopy'
+
 if has('mouse')
   set mouse=a
 endif
