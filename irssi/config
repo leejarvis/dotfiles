@@ -1,6 +1,6 @@
-servers = ();
-chatnets = {};
-channels = ();
+servers = ( );
+chatnets = { };
+channels = ( );
 
 aliases = {
   J = "join";
@@ -169,3 +169,8 @@ settings = {
     theme = "injekt";
   };
 };
+hilights = (
+  { text = "injekt"; nick = "yes"; word = "yes"; },
+  { text = "inkjet"; nick = "yes"; word = "yes"; },
+  { text = "lee.jarvis"; nick = "yes"; word = "yes"; }
+);
