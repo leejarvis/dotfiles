@@ -9,5 +9,9 @@ alias la='ls -A'
 # git
 alias g='git'
 
+# editors
+alias m='mate'
+alias v='mvim'
+
 # miscellaneous
 alias myip='curl http://whatismyip.org && echo'

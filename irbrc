@@ -2,15 +2,8 @@ ARGV.concat ['--readline']
 
 begin
   require 'ap'
-rescue LoadError 
-  puts "No awesome_print support (gem install awesome_print)"
-end
-
-begin
-  require 'pry'
-  Pry.start
-  exit
 rescue LoadError
+  puts "No awesome_print support (gem install awesome_print)"
 end
 
 require 'pp'
@@ -28,4 +21,12 @@ def irb_history
   index = history.rindex("exit") || history.rindex("quit") || -1
   content = history[(index+1)..-2].join("\n")
   puts history
+end
+
+
+begin
+  require 'pry'
+  Pry.start
+  exit
+rescue LoadError
 end
