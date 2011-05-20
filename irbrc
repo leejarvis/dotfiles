@@ -18,8 +18,7 @@ IRB.conf[:PROMPT_MODE] = :SIMPLE
 def _hist
   history = Readline::HISTORY.entries
   index = history.rindex("exit") || history.rindex("quit") || -1
-  content = history[(index+1)..-2].join("\n")
-  puts history
+  puts history[(index+1)..-2].join("\n")
 end
 
 if File.exist? "lib"
