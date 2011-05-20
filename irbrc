@@ -15,7 +15,7 @@ include FileUtils
 
 IRB.conf[:PROMPT_MODE] = :SIMPLE
 
-def irb_history
+def _hist
   history = Readline::HISTORY.entries
   index = history.rindex("exit") || history.rindex("quit") || -1
   content = history[(index+1)..-2].join("\n")
