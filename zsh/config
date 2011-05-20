@@ -37,13 +37,6 @@ setopt INC_APPEND_HISTORY SHARE_HISTORY
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_REDUCE_BLANKS
 
-# golang
-export GOROOT=$HOME/code/go
-export GOOS=darwin
-export GOARCH=amd64
-export GOBIN=$GOROOT/bin
-export PATH=$GOBIN:$PATH
-
 # jruby
 #export JRUBY_OPTS=--1.9
 
