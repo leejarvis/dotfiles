@@ -3,7 +3,6 @@ ARGV.concat ['--readline']
 begin
   require 'ap'
 rescue LoadError
-  puts "No awesome_print support (gem install awesome_print)"
 end
 
 require 'pp'
