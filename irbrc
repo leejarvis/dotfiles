@@ -23,10 +23,11 @@ def irb_history
   puts history
 end
 
+if File.exist? "lib"
+  $:.unshift "./lib"
 
-begin
-  require 'pry'
-  Pry.start
-  exit
-rescue LoadError
+  begin
+    require File.basename(Dir.pwd)
+  rescue LoadError
+  end
 end

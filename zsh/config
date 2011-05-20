@@ -7,8 +7,7 @@ else
 fi
 
 export EDITOR='vim'
-PATH="$HOME/bin:/opt/local/bin:/opt/local/sbin:$PATH"
-export PATH="$HOME/code/android-sdk/tools:$PATH"
+export PATH="$HOME/bin:/opt/local/bin:/opt/local/sbin:$HOME/code/android-sdk/tools:$PATH"
 
 # load functions
 fpath=(~/.zsh/functions $fpath)
