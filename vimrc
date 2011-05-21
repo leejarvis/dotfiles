@@ -28,7 +28,7 @@ set cursorline
 set nowrap
 set shell=/bin/sh
 
-colorscheme railscasts
+colorscheme solarized
 
 let g:gist_detect_filetype = 1
 let g:gist_clip_command = 'pbcopy'
