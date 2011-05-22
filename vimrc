@@ -27,6 +27,7 @@ set t_vb=
 set cursorline
 set nowrap
 set shell=/bin/sh
+let mapleader=','
 
 if has("gui_running")
   set background=light
