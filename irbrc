@@ -5,6 +5,11 @@ begin
 rescue LoadError
 end
 
+begin
+  require 'colorful_inspect'
+rescue LoadError
+end
+
 require 'pp'
 require 'irb/completion'
 require 'irb/ext/save-history'

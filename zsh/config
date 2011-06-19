@@ -7,7 +7,8 @@ else
 fi
 
 export EDITOR='vim'
-export PATH="$HOME/bin:/opt/local/bin:$HOME/code/android-sdk/tools:$PATH"
+PATH="$HOME/bin:/opt/local/bin:$HOME/code/android-sdk/tools:$PATH"
+export PATH="/opt/local/lib/postgresql90/bin:$PATH"
 
 # load functions
 fpath=(~/.zsh/functions $fpath)
