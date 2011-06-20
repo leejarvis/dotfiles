@@ -8,7 +8,8 @@ fi
 
 export EDITOR='vim'
 PATH="$HOME/bin:/opt/local/bin:$HOME/code/android-sdk/tools:$PATH"
-export PATH="/opt/local/lib/postgresql90/bin:$PATH"
+PATH="/opt/local/lib/postgresql90/bin:$PATH"
+export PATH="/opt/local/share/luarocks/bin:$PATH"
 
 # load functions
 fpath=(~/.zsh/functions $fpath)

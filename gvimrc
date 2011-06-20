@@ -1,4 +1,4 @@
-set guifont=Monaco:h13
+set guifont=BitstreamVeraSansMono-Roman:h14
 set guioptions-=T
 set lines=60
 set columns=110
