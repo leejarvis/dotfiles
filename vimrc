@@ -12,6 +12,7 @@ set showcmd
 set incsearch
 set shiftwidth=2
 set tabstop=2
+set linespace=2
 set smarttab
 set expandtab
 set autoread
