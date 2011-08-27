@@ -36,8 +36,6 @@ else
   set background=dark
 endif
 
-colorscheme solarized
-
 let g:gist_detect_filetype = 1
 let g:gist_clip_command = 'pbcopy'
 
