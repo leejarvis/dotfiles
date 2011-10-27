@@ -32,6 +32,7 @@ let mapleader=','
 
 if has("gui_running")
   set background=dark
+  colorscheme solarized
 else
   set background=dark
 endif
