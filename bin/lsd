@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+set -e
+
+path="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+export lsd_plugins_path="$path/lsd-plugins"
+
+cmd() {
+  local fname="$lsd_plugins_path/$1.sh"
+
+  if [ -f $fname ]
+  then
+    $SHELL "$lsd_plugins_path/$1.sh"
+  else
+    echo "No such command"
+    exit 1
+  fi
+}
+
+if [ -z "$1" ]
+then
+  cmd "help"
+else
+  cmd $1
+fi
