@@ -6,11 +6,11 @@ path="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 export lsd_plugins_path="$path/lsd-plugins"
 
 cmd() {
-  local fname="$lsd_plugins_path/$1.sh"
+  local fname="$(ls $lsd_plugins_path | grep $1)"
 
-  if [ -f $fname ]
+  if [ -f "$lsd_plugins_path/$fname" ]
   then
-    $SHELL "$lsd_plugins_path/$1.sh"
+    $SHELL "$lsd_plugins_path/$fname"
   else
     echo "No such command"
     exit 1
