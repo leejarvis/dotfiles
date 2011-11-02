@@ -10,7 +10,17 @@ cmd() {
 
   if [ -f "$lsd_plugins_path/$fname" ]
   then
-    $SHELL "$lsd_plugins_path/$fname"
+    ext=${fname##*.}
+
+    if [ "$ext" == "sh" ]
+    then
+      $SHELL "$lsd_plugins_path/$fname"
+    fi
+
+    if [ "$ext" == "rb" ]
+    then
+      ruby "$lsd_plugins_path/$fname"
+    fi
   else
     echo "No such command"
     exit 1
