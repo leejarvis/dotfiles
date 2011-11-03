@@ -90,3 +90,7 @@ map <C-l> <C-w>l
 " Command-][ to increase/decrease indentation
 vmap <D-]> >gv
 vmap <D-[> <gv
+
+" Command-/ to toggle comments
+map <D-/> <plug>NERDCommenterToggle<CR>
+imap <D-/> <Esc><plug>NERDCommenterToggle<CR>i
