@@ -61,7 +61,6 @@ if has("autocmd")
   autocmd BufWritePre * :%s/\s\+$//e
   autocmd BufWritePost vimrc source $MYVIMRC
   autocmd BufRead,BufNewFile {Gemfile,Rakefile,config.ru} set ft=ruby
-  " autocmd BufEnter * lcd %:p:h
 endif
 
 " language specific mkprgs
