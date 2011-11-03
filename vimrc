@@ -28,11 +28,13 @@ set t_vb=
 set cursorline
 set nowrap
 set shell=/bin/sh
+set wildmode=list:longest,list:full
+set wildignore+=*.o,*.obj,.git,*.rbc,*.class,vendor/gems/*,public/system*/*
 let mapleader=','
 
 if has("gui_running")
   set background=dark
-  colorscheme solarized
+  colorscheme desert
 else
   set background=dark
 endif
@@ -58,6 +60,7 @@ if has("autocmd")
 
   autocmd BufWritePre * :%s/\s\+$//e
   autocmd BufWritePost vimrc source $MYVIMRC
+  autocmd BufRead,BufNewFile {Gemfile,Rakefile,config.ru} set ft=ruby
   " autocmd BufEnter * lcd %:p:h
 endif
 
@@ -73,5 +76,8 @@ inoremap <D-Enter> <Esc>o
 nnoremap <D-Enter> o
 
 " NERDTree
-map <C-b> :NERDTreeToggle<CR>
-imap <C-b> <Esc>:NERDTreeToggle<CR>
+map <Leader>n :NERDTreeToggle<CR>
+let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
+
+" Command-T
+let g:CommandTMaxHeight=20
