@@ -80,3 +80,9 @@ let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
 
 " Command-T
 let g:CommandTMaxHeight=20
+
+" Window navigation
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
