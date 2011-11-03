@@ -58,13 +58,11 @@ if has("autocmd")
     \ exe "normal g`\"" |
     \ endif
 
-  autocmd BufWritePre * :%s/\s\+$//e
-  autocmd BufWritePost vimrc source $MYVIMRC
-  autocmd BufRead,BufNewFile {Gemfile,Rakefile,config.ru} set ft=ruby
+  au BufWritePre * :%s/\s\+$//e
+  au BufWritePost vimrc source $MYVIMRC
+  au BufRead,BufNewFile {Gemfile,Rakefile,config.ru} set ft=ruby
+  au FileType ruby setl mp=ruby\ %
 endif
-
-" language specific mkprgs
-au FileType ruby setl mp=ruby\ %
 
 " map cmd+r to make
 inoremap <D-r> <Esc>:make<CR>
