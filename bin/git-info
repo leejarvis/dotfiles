@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+if [ -z "$1" ]
+then
+  echo "git info <path/to/file>"
+  exit 1
+fi
+
+$(git rev-parse 2>/dev/null)
+if [ $? -ne 0 ]
+then
+  echo "This directory is not under git control"
+  exit 1
+fi
+
+git log --reverse --oneline --format="Created by %Cgreen%an %Creseton %Cred%cd %Creset(%cr)" "$1" | head -1
+git log --oneline --format="Last Updated by %Cgreen%an %Creseton %Cred%cd %Creset(%cr)" "$1" | head -1
