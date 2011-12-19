@@ -7,10 +7,7 @@ else
 fi
 
 export EDITOR='vim'
-PATH="$HOME/bin:/usr/local/bin:$HOME/code/android-sdk/tools:$HOME:/opt/local/bin:/usr/local/mysql/bin:$PATH"
-export MAGICK_HOME="/usr/bin/imagemagick"
-export DYLD_LIBRARY_PATH=/usr/local/mysql/lib/:$MAGICK_HOME/lib
-export PATH=$MAGICK_HOME/bin:$PATH
+PATH="$HOME/bin:/usr/local/bin:$HOME:/opt/local/bin:$PATH"
 
 # load functions
 fpath=(~/.zsh/functions $fpath)
