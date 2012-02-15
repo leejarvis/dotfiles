@@ -11,6 +11,7 @@ PATH="$HOME/bin:/usr/local/bin:$HOME:/opt/local/bin:$PATH"
 
 export RUBYOPT=rubygems
 
+
 # load functions
 fpath=(~/.zsh/functions $fpath)
 autoload -U ~/.zsh/functions/*(:t)
@@ -38,6 +39,22 @@ setopt APPEND_HISTORY
 setopt INC_APPEND_HISTORY SHARE_HISTORY
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_REDUCE_BLANKS
+
+be() {
+  if [[ -a Gemfile ]]; then
+    bundle exec $*
+  else
+    command $*
+  fi
+}
+
+chpwd() {
+  if [[ -s "./.env" ]]; then source ./.env; fi
+}
+
+alias rake='be rake'
+alias guard='be guard'
+alias cap='be cap'
 
 if [[ -s "$HOME/.rvm/scripts/rvm" ]]; then
   source "$HOME/.rvm/scripts/rvm"
