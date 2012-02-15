@@ -11,7 +11,6 @@ PATH="$HOME/bin:/usr/local/bin:$HOME:/opt/local/bin:$PATH"
 
 export RUBYOPT=rubygems
 
-
 # load functions
 fpath=(~/.zsh/functions $fpath)
 autoload -U ~/.zsh/functions/*(:t)
