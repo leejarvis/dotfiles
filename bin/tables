@@ -1,0 +1,22 @@
+#!/usr/bin/env ruby
+
+begin
+  require './config/environment'
+rescue LoadError
+  abort 'Not in a rails environment?'
+end
+
+tables = ActiveRecord::Base.connection.tables
+
+if table = ARGV.shift
+  tables.keep_if { |t| t.downcase.include?(table.downcase) }
+end
+
+tables.each do |table|
+  puts "#{table} - "
+  columns = ActiveRecord::Base.connection.columns(table)
+  columns.each do |column|
+    puts "  #{column.name} (#{column.type})"
+  end
+  puts "\n\n"
+end
