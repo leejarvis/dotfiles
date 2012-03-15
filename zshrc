@@ -7,7 +7,7 @@ else
 fi
 
 export EDITOR='vim'
-PATH="$HOME/bin:/usr/local/bin:$HOME:/opt/local/bin:$PATH"
+export PATH="$HOME/bin:/usr/local/bin:/opt/local/bin:$PATH"
 
 export RUBYOPT=rubygems
 
