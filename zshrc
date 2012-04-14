@@ -47,13 +47,13 @@ be() {
   fi
 }
 
-chpwd() {
-  if [[ -s "./.env" ]]; then source ./.env; fi
-}
+[[ -s "./.env" ]] && source ./.env
+chpwd() { [[ -s "./.env" ]] && source ./.env }
 
 alias rake='be rake'
 alias guard='be guard'
 alias cap='be cap'
+alias foreman='be foreman'
 
 if [[ -s "$HOME/.rvm/scripts/rvm" ]]; then
   source "$HOME/.rvm/scripts/rvm"
