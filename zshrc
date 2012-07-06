@@ -6,7 +6,7 @@ else
   export PS1='%~$(git_info_for_prompt)%# '
 fi
 
-export EDITOR='vim'
+export EDITOR='subl -w'
 export PATH="$HOME/bin:/usr/local/bin:/opt/local/bin:$PATH"
 
 export RUBYOPT=rubygems
@@ -47,17 +47,15 @@ be() {
   fi
 }
 
-[[ -s "./.env" ]] && source ./.env
-chpwd() { [[ -s "./.env" ]] && source ./.env }
+eval `direnv hook $0`
 
 alias rake='be rake'
 alias guard='be guard'
 alias cap='be cap'
 alias foreman='be foreman'
+alias heroku='be heroku'
 
-if [[ -s "$HOME/.rvm/scripts/rvm" ]]; then
-  source "$HOME/.rvm/scripts/rvm"
-elif [[ -d "$HOME/.rbenv" ]]; then
+if [[ -d "$HOME/.rbenv" ]]; then
   export PATH="$HOME/.rbenv/bin:$PATH"
   eval "$(rbenv init -)"
 fi
