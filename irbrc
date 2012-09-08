@@ -29,3 +29,8 @@ end
 if defined?(Rails)
   ActiveRecord::Base.logger.level = 1
 end
+
+def bench
+  require 'benchmark'
+  Benchmark.realtime { yield }
+end
