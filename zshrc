@@ -9,7 +9,7 @@ fi
 export EDITOR='subl -w'
 export GOPATH=$HOME/code/go
 export PATH="$HOME/bin:/usr/local/bin:/opt/local/bin:/Applications/Postgres.app/Contents/MacOS/bin:$HOME/code/go/bin:$PATH"
-
+export ALLUR_ROOT=$HOME/code/allur
 export RUBYOPT=rubygems
 
 # load functions
@@ -48,22 +48,15 @@ be() {
   fi
 }
 
-heroku() {
-  if [[ -x '/usr/bin/heroku' ]]; then
-    /usr/bin/heroku $*
-  else
-    heroku $*
-  fi
-}
-
 eval `direnv hook $0`
 
-alias rake='be rake'
 alias guard='be guard'
 alias cap='be cap'
 alias foreman='be foreman'
 
-if [[ -d "$HOME/.rbenv" ]]; then
-  export PATH="$HOME/.rbenv/bin:$PATH"
-  eval "$(rbenv init -)"
-fi
+source /usr/local/opt/chruby/share/chruby/chruby.sh
+RUBIES=(~/.rubies/*)
+chruby 1.9.3-p327
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

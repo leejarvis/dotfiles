@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+rdoc -a -o html -f sdoc -T rails -g
