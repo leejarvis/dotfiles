@@ -158,8 +158,8 @@ settings = {
     actlist_sort = "refnum";
   };
   "fe-common/core" = {
-    autocreate_own_query = "no";
-    autocreate_query_level = "NONE";
+    autocreate_own_query = "yes";
+    autocreate_query_level = "MSGS DCCMSGS";
     use_status_window = "no";
     use_msgs_window = "no";
     autoclose_windows = "no";
@@ -167,6 +167,8 @@ settings = {
     windows_auto_renumber = "no";
     print_active_channel = "yes";
     theme = "injekt";
+    autocreate_split_windows = "no";
+    autocreate_windows = "yes";
   };
 };
 hilights = (
