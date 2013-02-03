@@ -53,11 +53,10 @@ eval `direnv hook $0`
 alias guard='be guard'
 alias cap='be cap'
 alias foreman='be foreman'
-#alias irb='pry'
 
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 RUBIES=(~/.rubies/*)
-chruby 1.9.3-p327
+chruby 1.9.3-p374
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
