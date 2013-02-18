@@ -1,7 +1,5 @@
 ---
 :update_sources: true
-:sources:
-- http://gemcutter.org
 :verbose: true
 :bulk_threshold: 1000
 :backtrace: false

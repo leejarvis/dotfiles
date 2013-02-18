@@ -56,7 +56,7 @@ alias foreman='be foreman'
 
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 RUBIES=(~/.rubies/*)
-chruby 1.9.3-p374
+chruby 1.9.3-p385
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
