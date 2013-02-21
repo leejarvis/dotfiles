@@ -215,7 +215,7 @@ abstracts = {
   # public message
   sb_act_msg = "%R$*";
   # hilight
-  sb_act_hilight = "%R$*";
+  sb_act_hilight = "%P$*";
   # hilight with specified color, $0 = color, $1 = text
   sb_act_hilight_color = "$0$1-%n";
 };

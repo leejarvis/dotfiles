@@ -176,3 +176,7 @@ hilights = (
   { text = "inkjet"; nick = "yes"; word = "yes"; },
   { text = "lee.jarvis"; nick = "yes"; word = "yes"; }
 );
+ignores = (
+  { level = "JOINS PARTS QUITS"; channels = ( "all" ); },
+  { level = "JOINS PARTS QUITS NICKS"; }
+);
