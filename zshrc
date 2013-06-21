@@ -8,7 +8,7 @@ fi
 
 export EDITOR='subl -w'
 export GOPATH=$HOME/code/go
-export PATH="$HOME/bin:/usr/local/bin:/opt/local/bin:/Applications/Postgres.app/Contents/MacOS/bin:$HOME/code/go/bin:$PATH"
+export PATH="$HOME/bin:/usr/local/bin:/opt/local/bin:/Applications/Postgres.app/Contents/MacOS/bin:$HOME/code/go/bin:/usr/local/share/npm/bin:$PATH"
 export ALLUR_ROOT=$HOME/code/allur
 export RUBYOPT=rubygems
 
@@ -40,23 +40,15 @@ setopt INC_APPEND_HISTORY SHARE_HISTORY
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_REDUCE_BLANKS
 
-be() {
-  if [[ -a Gemfile ]]; then
-    bundle exec $*
-  else
-    command $*
-  fi
-}
+alias be='bundle exec'
 
 eval `direnv hook $0`
 
-alias guard='be guard'
-alias cap='be cap'
-alias foreman='be foreman'
-
 source /usr/local/opt/chruby/share/chruby/chruby.sh
+source /usr/local/opt/chruby/share/chruby/auto.sh
 RUBIES=(~/.rubies/*)
-chruby 1.9.3-p385
+#chruby 1.9.3-p392
+chruby 2.0.0p0
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
