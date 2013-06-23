@@ -1,0 +1,28 @@
+#!/usr/bin/env ruby
+
+begin
+  require 'redcarpet'
+  require 'rouge'
+  require 'rouge/plugins/redcarpet'
+rescue LoadError
+  puts "gem install redcarpet rouge"
+end
+
+class HTML < Redcarpet::Render::HTML
+  include Rouge::Plugins::Redcarpet
+end
+
+def markdown_to_html(markdown)
+  renderer = HTML.new(filter_html: true)
+  options = {
+    autolink: true,
+    no_intra_emphasis: true,
+    fenced_code_blocks: true,
+    lax_html_blocks: true,
+    strikethrough: true,
+    superscript: true
+  }
+  Redcarpet::Markdown.new(renderer, options).render(markdown)
+end
+
+puts markdown_to_html(ARGF.read)
