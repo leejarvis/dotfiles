@@ -1,16 +1,10 @@
 # environmental variables
 
-if [[ -n $SSH_CONNECTION ]]; then
-  export PS1='[%m] %3~$(git_info_for_prompt)%# '
-else
-  export PS1='%~$(git_info_for_prompt)%# '
-fi
+export PS1='%~$(git_info_for_prompt)%# '
 
 export EDITOR='subl -w'
 export GOPATH=$HOME/code/go
 export PATH="$HOME/bin:/usr/local/bin:/opt/local/bin:/Applications/Postgres.app/Contents/MacOS/bin:$HOME/code/go/bin:/usr/local/share/npm/bin:$PATH"
-export ALLUR_ROOT=$HOME/code/allur
-export RUBYOPT=rubygems
 
 # load functions
 fpath=(~/.zsh/functions $fpath)
@@ -40,14 +34,13 @@ setopt INC_APPEND_HISTORY SHARE_HISTORY
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_REDUCE_BLANKS
 
-alias be='bundle exec'
+source $HOME/.zsh/aliases
 
 eval `direnv hook $0`
 
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 source /usr/local/opt/chruby/share/chruby/auto.sh
 RUBIES=(~/.rubies/*)
-#chruby 1.9.3-p392
 chruby 2.0
 
 export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
