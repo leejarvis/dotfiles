@@ -5,3 +5,4 @@ vim/doc/*tags*
 vim/doc/tags
 vim/.netrwhist
 .DS_Store
+vim/bundle
