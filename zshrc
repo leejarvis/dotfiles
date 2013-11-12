@@ -36,8 +36,6 @@ setopt HIST_REDUCE_BLANKS
 
 source $HOME/.zsh/aliases
 
-eval `direnv hook $0`
-
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 source /usr/local/opt/chruby/share/chruby/auto.sh
 RUBIES=(~/.rubies/*)
@@ -47,3 +45,8 @@ export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+eval `direnv hook $0`
+
+# added by travis gem
+[ -f /Users/lee/.travis/travis.sh ] && source /Users/lee/.travis/travis.sh
