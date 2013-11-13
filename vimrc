@@ -64,7 +64,7 @@ if has("autocmd")
         au BufRead,BufNewFile *.go setfiletype go
         au BufWritePre * :%s/\s\+$//e
 
-        autocmd FileType ruby,haml,sass set ai sw=2 sts=2 et
+        autocmd FileType ruby,haml,sass set sw=2 sts=2
 
         au BufWritePost .vimrc source $MYVIMRC
 endif
@@ -73,9 +73,8 @@ if has("gui_running")
         set guifont=Bitstream\ Vera\ Sans\ Mono:h15
         set guioptions-=m
         set guioptions-=T
+        colorscheme desert
 endif
-
-colorscheme desert
 
 let mapleader = ","
 
