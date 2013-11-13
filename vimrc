@@ -114,3 +114,9 @@ noremap <D-A-Left>  :tabp<CR>
 " CMD+Enter to drop to a new line
 inoremap <D-Enter> <Esc>o
 nnoremap <D-Enter> o
+
+" Window navigation
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
