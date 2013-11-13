@@ -106,7 +106,7 @@ endif
 
 let mapleader = ","
 
-map <Leader>bi :!bundle install<cr>
+map <Leader>b :!bundle install<cr>
 
 noremap <D-A-Right> :tabn<CR>
 noremap <D-A-Left>  :tabp<CR>
