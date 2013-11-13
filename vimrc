@@ -106,7 +106,7 @@ endif
 
 let mapleader = ","
 
-map <Leader>b :!bundle install<cr>
+map <Leader>b :!bundle install<CR>
 
 noremap <D-A-Right> :tabn<CR>
 noremap <D-A-Left>  :tabp<CR>
@@ -115,8 +115,12 @@ noremap <D-A-Left>  :tabp<CR>
 inoremap <D-Enter> <Esc>o
 nnoremap <D-Enter> o
 
+" CMD+X to remove the current line
 inoremap <C-x> <Esc>dd
 nnoremap <C-x> dd
+
+" Switch to the last buffer
+map <Leader>l :b#<CR>
 
 " Window navigation
 map <C-h> <C-w>h
