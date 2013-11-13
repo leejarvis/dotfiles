@@ -30,6 +30,10 @@ set scrolloff=4 		" Start scrolling 4 lines before border
 set splitbelow                  " Open new split pains to bottom
 set splitright                  " and right
 
+set wildignore=log/**
+set wildignore+=tmp/**
+set wildignore+=*.png,*.jpg,*.gif
+
 set rtp+=~/.vim/bundle/vundle
 set rtp+=/usr/local/go/misc/vim
 call vundle#rc()
