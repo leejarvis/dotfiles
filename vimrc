@@ -115,6 +115,9 @@ noremap <D-A-Left>  :tabp<CR>
 inoremap <D-Enter> <Esc>o
 nnoremap <D-Enter> o
 
+inoremap <C-x> <Esc>dd
+nnoremap <C-x> dd
+
 " Window navigation
 map <C-h> <C-w>h
 map <C-j> <C-w>j
