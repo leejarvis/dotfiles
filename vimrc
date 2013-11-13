@@ -62,8 +62,12 @@ Bundle "rking/ag.vim"
 
 let go_highlight_trailing_whitespace_error = 0
 
+" Gist
 let g:gist_clip_command = 'pbcopy'
 let g:gist_post_private = 1
+
+" CtrlP
+let g:ctrlp_match_window_bottom = 0
 
 " Use Silver Searcher if possible
 if executable("ag")
