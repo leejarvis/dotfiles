@@ -80,8 +80,8 @@ let mapleader = ","
 
 map <Leader>bi :!bundle install<cr>
 
-noremap <S-Right> :tabn<CR>
-noremap <S-Left>  :tabp<CR>
+noremap <D-A-Right> :tabn<CR>
+noremap <D-A-Left>  :tabp<CR>
 
 " CMD+Enter to drop to a new line
 inoremap <D-Enter> <Esc>o
