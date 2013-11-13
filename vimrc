@@ -61,8 +61,11 @@ Bundle "garbas/vim-snipmate"
 Bundle "rking/ag.vim"
 Bundle "scrooloose/syntastic"
 Bundle "tpope/vim-fugitive"
+Bundle "dgryski/vim-godef"
 
+" Golang
 let go_highlight_trailing_whitespace_error = 0
+let g:godef_split=0 " Replace current buffer when using godef
 
 " Gist
 let g:gist_clip_command = 'pbcopy'
