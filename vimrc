@@ -102,6 +102,7 @@ if has("gui_running")
         set guioptions-=m
         set guioptions-=T
         colorscheme desert
+        set vb t_vb=
 endif
 
 let mapleader = ","
