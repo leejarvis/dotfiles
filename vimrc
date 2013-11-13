@@ -75,7 +75,9 @@ endif
 if has("autocmd")
         filetype plugin indent on
 
-        au BufRead,BufNewFile *.go setfiletype go
+        au BufRead,BufNewFile *.go set ft=go
+        au BufRead,BufNewFile *.coffee set ft=coffee
+
         au BufWritePre *.go :Fmt
         au BufWritePre * :%s/\s\+$//e
 
