@@ -56,6 +56,7 @@ Bundle "tpope/vim-haml"
 Bundle "mattn/webapi-vim"
 Bundle "mattn/gist-vim"
 Bundle "MarcWeber/vim-addon-mw-utils.git"
+Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
 Bundle "rking/ag.vim"
 
@@ -81,6 +82,11 @@ if has("autocmd")
         autocmd FileType ruby,haml,sass set sw=2 sts=2
 
         au BufWritePost .vimrc source $MYVIMRC
+
+        autocmd BufReadPost *
+          \ if line("'\"") > 1 && line("'\"") <= line("$") |
+          \   exe "normal! g`\"" |
+          \ endif
 endif
 
 if has("gui_running")
