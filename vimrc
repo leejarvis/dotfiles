@@ -60,6 +60,7 @@ Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
 Bundle "rking/ag.vim"
 Bundle "scrooloose/syntastic"
+Bundle "tpope/vim-fugitive"
 
 let go_highlight_trailing_whitespace_error = 0
 
