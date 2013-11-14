@@ -115,6 +115,12 @@ map <Leader>b :!bundle install<CR>
 map <Leader>l :b#<CR>
 map <Leader>f mzgg=G`z<CR>
 
+" Toggle commenting, current line in normal mode, entire block in visual mode
+" relies on tcomment
+nmap <Leader>c gcc<CR>
+vmap <Leader>c gc<CR>
+
+" Switch tabs like Chrome
 noremap <D-A-Right> :tabn<CR>
 noremap <D-A-Left>  :tabp<CR>
 
@@ -122,7 +128,7 @@ noremap <D-A-Left>  :tabp<CR>
 inoremap <D-Enter> <Esc>o
 nnoremap <D-Enter> o
 
-" CMD+X to remove the current line
+" Ctrl+X to remove the current line
 inoremap <C-x> <Esc>dd
 nnoremap <C-x> dd
 
