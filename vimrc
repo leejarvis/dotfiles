@@ -62,6 +62,7 @@ Bundle "rking/ag.vim"
 Bundle "scrooloose/syntastic"
 Bundle "tpope/vim-fugitive"
 Bundle "dgryski/vim-godef"
+Bundle "Blackrush/vim-gocode"
 
 " Golang
 let go_highlight_trailing_whitespace_error = 0
