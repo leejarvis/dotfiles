@@ -90,7 +90,7 @@ if has("autocmd")
         au BufWritePre *.go :Fmt
         au BufWritePre * :%s/\s\+$//e
 
-        autocmd FileType ruby,haml,sass set sw=2 sts=2
+        au FileType ruby,haml,sass set sw=2 sts=2
 
         au BufWritePost .vimrc source $MYVIMRC
 
@@ -111,6 +111,8 @@ endif
 let mapleader = ","
 
 map <Leader>b :!bundle install<CR>
+map <Leader>l :b#<CR>
+map <Leader>f mzgg=G`z<CR>
 
 noremap <D-A-Right> :tabn<CR>
 noremap <D-A-Left>  :tabp<CR>
@@ -122,9 +124,6 @@ nnoremap <D-Enter> o
 " CMD+X to remove the current line
 inoremap <C-x> <Esc>dd
 nnoremap <C-x> dd
-
-" Switch to the last buffer
-map <Leader>l :b#<CR>
 
 " Window navigation
 map <C-h> <C-w>h
