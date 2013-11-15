@@ -132,6 +132,10 @@ nnoremap <D-Enter> o
 inoremap <C-x> <Esc>dd
 nnoremap <C-x> dd
 
+" Indentation
+map <D-]> >gv
+map <D-[> <gv
+
 " Window navigation
 map <C-h> <C-w>h
 map <C-j> <C-w>j
