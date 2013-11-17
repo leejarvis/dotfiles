@@ -60,6 +60,7 @@ Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
 Bundle "rking/ag.vim"
 Bundle "scrooloose/syntastic"
+Bundle "scrooloose/nerdtree"
 Bundle "tpope/vim-fugitive"
 Bundle "dgryski/vim-godef"
 Bundle "Blackrush/vim-gocode"
@@ -74,6 +75,7 @@ let g:gist_post_private = 1
 
 " CtrlP
 let g:ctrlp_match_window_bottom = 0
+let g:ctrlp_dont_split = 'nerdtree'
 
 " Use Silver Searcher if possible
 if executable("ag")
@@ -111,9 +113,10 @@ endif
 
 let mapleader = ","
 
-map <Leader>b :!bundle install<CR>
+map <Leader>b :NERDTreeToggle<CR>
 map <Leader>l :b#<CR>
 map <Leader>f mzgg=G`z<CR>
+map <Leader>w caw
 
 " Toggle commenting, current line in normal mode, entire block in visual mode
 " relies on tcomment
