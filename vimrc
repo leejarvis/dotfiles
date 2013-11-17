@@ -76,6 +76,8 @@ let g:gist_post_private = 1
 " CtrlP
 let g:ctrlp_match_window_bottom = 0
 let g:ctrlp_dont_split = 'nerdtree'
+imap <C-p> <esc>:CtrlP<CR>
+vmap <C-p> <esc>:CtrlP<CR>
 
 " Use Silver Searcher if possible
 if executable("ag")
