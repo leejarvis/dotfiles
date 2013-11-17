@@ -64,6 +64,7 @@ Bundle "scrooloose/nerdtree"
 Bundle "tpope/vim-fugitive"
 Bundle "dgryski/vim-godef"
 Bundle "Blackrush/vim-gocode"
+Bundle "majutsushi/tagbar"
 
 " Golang
 let go_highlight_trailing_whitespace_error = 0
@@ -119,6 +120,7 @@ map <Leader>b :NERDTreeToggle<CR>
 map <Leader>l :b#<CR>
 map <Leader>f mzgg=G`z<CR>
 map <Leader>w caw
+map <Leader>t :TagbarToggle<CR>
 
 " Toggle commenting, current line in normal mode, entire block in visual mode
 " relies on tcomment
