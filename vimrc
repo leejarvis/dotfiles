@@ -65,6 +65,7 @@ Bundle "tpope/vim-fugitive"
 Bundle "dgryski/vim-godef"
 Bundle "Blackrush/vim-gocode"
 Bundle "majutsushi/tagbar"
+Bundle "plasticboy/vim-markdown"
 
 " Golang
 let go_highlight_trailing_whitespace_error = 0
