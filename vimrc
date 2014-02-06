@@ -97,7 +97,7 @@ if has("autocmd")
         au BufWritePre *.go :Fmt
         au BufWritePre * :%s/\s\+$//e
 
-        au FileType ruby,haml,sass,coffee,conf set sw=2 sts=2
+        au FileType ruby,haml,sass,coffee,conf,html,js set sw=2 sts=2
 
         au BufWritePost .vimrc source $MYVIMRC
 

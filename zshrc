@@ -2,9 +2,8 @@
 
 export PS1='%~$(git_info_for_prompt)%# '
 
-export EDITOR='subl -w'
 export GOPATH=$HOME/code/go
-export PATH="$HOME/bin:/usr/local/bin:/opt/local/bin:/Applications/Postgres.app/Contents/MacOS/bin:$HOME/code/go/bin:/usr/local/share/npm/bin:$PATH"
+export PATH="$HOME/bin:/usr/local/bin:/opt/local/bin:/Applications/Postgres93.app/Contents/MacOS/bin:$HOME/code/go/bin:/usr/local/share/npm/bin:$PATH"
 
 # load functions
 fpath=(~/.zsh/functions $fpath)
