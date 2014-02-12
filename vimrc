@@ -29,6 +29,7 @@ set title 			" Show filename in titlebar
 set scrolloff=4 		" Start scrolling 4 lines before border
 set splitbelow                  " Open new split pains to bottom
 set splitright                  " and right
+set shortmess+=A                " Disable "ATTENTION" message when a swap file is found
 
 set wildignore=log/**
 set wildignore+=tmp/**
