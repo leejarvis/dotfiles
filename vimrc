@@ -67,6 +67,7 @@ Bundle "dgryski/vim-godef"
 Bundle "Blackrush/vim-gocode"
 Bundle "majutsushi/tagbar"
 Bundle "plasticboy/vim-markdown"
+Bundle "groenewege/vim-less"
 
 " Golang
 let go_highlight_trailing_whitespace_error = 0
@@ -142,8 +143,8 @@ inoremap <C-x> <Esc>dd
 nnoremap <C-x> dd
 
 " Indentation
-map <D-]> >gv
-map <D-[> <gv
+map <D-]> <Esc>1>>
+map <D-[> <Esc>1<<
 
 " Window navigation
 map <C-h> <C-w>h
