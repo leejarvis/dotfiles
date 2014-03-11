@@ -95,6 +95,8 @@ if has("autocmd")
 
         au BufRead,BufNewFile *.go set ft=go
         au BufRead,BufNewFile *.coffee set ft=coffee
+        au BufRead,BufNewFile *.less set ft=less
+        au BufRead,BufNewFile *.slim set ft=slim
 
         au BufWritePre *.go :Fmt
         au BufWritePre * :%s/\s\+$//e
@@ -151,6 +153,8 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
+
+noremap <D-Left> <Esc>^i
 
 function! RenameFile()
     let old_name = expand('%')
