@@ -86,7 +86,7 @@ vmap <C-p> <esc>:CtrlP<CR>
 " Use Silver Searcher if possible
 if executable("ag")
         set grepprg=ag
-        let g:ctrlp_user_command = "ag %s -l --nocolor -g ''"
+        let g:ctrlp_user_command = "ag %s -l --skip-vcs-ignores --nocolor -g ''"
         let g:ctrlp_use_caching = 0
 endif
 
