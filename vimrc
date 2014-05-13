@@ -140,10 +140,6 @@ noremap <D-A-Left>  :tabp<CR>
 inoremap <D-Enter> <Esc>o
 nnoremap <D-Enter> o
 
-" Ctrl+X to remove the current line
-inoremap <C-x> <Esc>dd
-nnoremap <C-x> dd
-
 " Indentation
 map <D-]> <Esc>1>>
 map <D-[> <Esc>1<<
