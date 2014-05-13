@@ -140,10 +140,6 @@ noremap <D-A-Left>  :tabp<CR>
 inoremap <D-Enter> <Esc>o
 nnoremap <D-Enter> o
 
-" Indentation
-map <D-]> <Esc>1>>
-map <D-[> <Esc>1<<
-
 " Window navigation
 map <C-h> <C-w>h
 map <C-j> <C-w>j
