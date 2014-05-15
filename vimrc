@@ -126,6 +126,7 @@ map <Leader>l :b#<CR>
 map <Leader>f mzgg=G`z<CR>
 map <Leader>w caw
 map <Leader>t :TagbarToggle<CR>
+map <Leader>rm :call delete(expand('%')) \| bdelete!<CR>
 
 " Toggle commenting, current line in normal mode, entire block in visual mode
 " relies on tcomment
