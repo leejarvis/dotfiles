@@ -19,6 +19,7 @@ alias gl='git log'
 alias gca='git commit -a'
 alias gcm='git commit'
 alias gm='git merge'
+alias gam='git commit --amend'
 
 # ruby stuff
 alias be='bundle exec'
