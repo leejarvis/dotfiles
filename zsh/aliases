@@ -21,5 +21,7 @@ alias gcm='git commit'
 alias gm='git merge'
 alias gam='git commit --amend'
 
+alias jsc="/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc"
+
 # ruby stuff
 alias be='bundle exec'
