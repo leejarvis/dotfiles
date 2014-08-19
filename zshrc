@@ -2,8 +2,7 @@
 
 export PS1='%~$(git_info_for_prompt)%# '
 
-export GOPATH=$HOME/code/go
-export PATH="$HOME/bin:/usr/local/bin:/opt/local/bin:/Applications/Postgres93.app/Contents/MacOS/bin:$HOME/code/go/bin:/usr/local/share/npm/bin:$PATH"
+export PATH="$HOME/bin:/usr/local/bin:/opt/local/bin:/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
 
 # load functions
 fpath=(~/.zsh/functions $fpath)
@@ -39,8 +38,5 @@ source /usr/local/opt/chruby/share/chruby/chruby.sh
 source /usr/local/opt/chruby/share/chruby/auto.sh
 RUBIES=(~/.rubies/*)
 chruby 2.1
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
 
 eval "$(direnv hook zsh)"
