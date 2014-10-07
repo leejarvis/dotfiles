@@ -1,7 +1,7 @@
 # environmental variables
 
 export PS1='%~$(git_info_for_prompt)%# '
-
+export GOPATH=$HOME/code/go
 export PATH="$HOME/bin:/usr/local/bin:/opt/local/bin:/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
 
 # load functions
