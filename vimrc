@@ -62,16 +62,11 @@ Plugin 'rking/ag.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
-Plugin 'dgryski/vim-godef'
-Plugin 'Blackrush/vim-gocode'
+Plugin 'fatih/vim-go'
 Plugin 'majutsushi/tagbar'
 Plugin 'gabrielelana/vim-markdown'
 Plugin 'groenewege/vim-less'
 Plugin 'godlygeek/tabular'
-
-" Golang
-let go_highlight_trailing_whitespace_error = 0
-let g:godef_split=0 " Replace current buffer when using godef
 
 " Gist
 let g:gist_clip_command = 'pbcopy'
@@ -98,7 +93,6 @@ if has("autocmd")
         au BufRead,BufNewFile *.less set ft=less
         au BufRead,BufNewFile *.slim set ft=slim
 
-        au BufWritePre *.go :Fmt
         au BufWritePre * :%s/\s\+$//e
 
         au FileType ruby,haml,sass,coffee,conf,html,js set sw=2 sts=2
@@ -125,7 +119,7 @@ map <Leader>b :NERDTreeToggle<CR>
 map <Leader>l :b#<CR>
 map <Leader>f mzgg=G`z<CR>
 map <Leader>w caw
-map <Leader>t :Tab /=<CR>
+map <Leader>t :TagbarToggle<CR>
 map <Leader>rm :call delete(expand('%')) \| bdelete!<CR>
 
 " Toggle commenting, current line in normal mode, entire block in visual mode
