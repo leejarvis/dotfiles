@@ -93,6 +93,7 @@ if has("autocmd")
         au BufRead,BufNewFile *.less set ft=less
         au BufRead,BufNewFile *.slim set ft=slim
 
+        au BufWritePre *.go :GoImports
         au BufWritePre * :%s/\s\+$//e
 
         au FileType ruby,haml,sass,coffee,conf,html,js set sw=2 sts=2
