@@ -1,0 +1,9 @@
+\timing on
+
+\pset null '<NULL>'
+
+-- Use extended output automatically
+\x auto
+
+-- Don't exit with ctrl-d unless it's pressed 3 times
+\set IGNOREEOF 2
