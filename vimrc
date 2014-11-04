@@ -96,7 +96,7 @@ if has("autocmd")
         au BufWritePre *.go :GoImports
         au BufWritePre * :%s/\s\+$//e
 
-        au FileType ruby,haml,sass,coffee,conf,html,js set sw=2 sts=2
+        au FileType ruby,haml,sass,scss,coffee,conf,html,js set sw=2 sts=2
 
         au BufWritePost .vimrc source $MYVIMRC
 
