@@ -67,6 +67,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'gabrielelana/vim-markdown'
 Plugin 'groenewege/vim-less'
 Plugin 'godlygeek/tabular'
+Plugin 'pangloss/vim-javascript'
 
 " Gist
 let g:gist_clip_command = 'pbcopy'
@@ -85,6 +86,9 @@ if executable("ag")
         let g:ctrlp_use_caching = 0
 endif
 
+" Go-vim
+let g:go_fmt_fail_silently = 1
+
 if has("autocmd")
         filetype plugin indent on
 
@@ -96,7 +100,11 @@ if has("autocmd")
         au BufWritePre *.go :GoImports
         au BufWritePre * :%s/\s\+$//e
 
-        au FileType ruby,haml,sass,scss,coffee,conf,html,js set sw=2 sts=2
+        au FileType ruby,haml,sass,scss,coffee,conf,html set sw=2 sts=2
+        au FileType javascript setlocal sw=4 sts=4 tw=4
+
+        " Enter closing brace in Go/JS
+        autocmd FileType go,javascript inoremap <buffer> {<CR>  {<CR>}<Esc>O
 
         au BufWritePost .vimrc source $MYVIMRC
 
