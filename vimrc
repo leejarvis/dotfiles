@@ -89,6 +89,8 @@ endif
 " Go-vim
 let g:go_fmt_fail_silently = 1
 
+let g:syntastic_check_on_open = 1
+
 if has("autocmd")
         filetype plugin indent on
 
