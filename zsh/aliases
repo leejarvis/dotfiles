@@ -23,5 +23,7 @@ alias gam='git commit --amend'
 
 alias jsc="/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc"
 
+alias serve="python -m SimpleHTTPServer"
+
 # ruby stuff
 alias be='bundle exec'

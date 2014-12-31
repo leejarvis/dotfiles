@@ -68,6 +68,9 @@ Plugin 'gabrielelana/vim-markdown'
 Plugin 'groenewege/vim-less'
 Plugin 'godlygeek/tabular'
 Plugin 'pangloss/vim-javascript'
+" Plugin 'Valloric/YouCompleteMe'
+Plugin 'wting/rust.vim'
+Plugin 'greyblake/vim-preview'
 
 " Gist
 let g:gist_clip_command = 'pbcopy'
@@ -88,7 +91,6 @@ endif
 
 " Go-vim
 let g:go_fmt_fail_silently = 1
-
 let g:syntastic_check_on_open = 1
 
 if has("autocmd")
@@ -98,12 +100,13 @@ if has("autocmd")
         au BufRead,BufNewFile *.coffee set ft=coffee
         au BufRead,BufNewFile *.less set ft=less
         au BufRead,BufNewFile *.slim set ft=slim
+        au BufRead,BufNewFile *.rs set ft=rust
 
         au BufWritePre *.go :GoImports
         au BufWritePre * :%s/\s\+$//e
 
         au FileType ruby,haml,sass,scss,coffee,conf,html set sw=2 sts=2
-        au FileType javascript setlocal sw=4 sts=4 tw=4
+        au FileType javascript setlocal sw=4 sts=4
 
         " Enter closing brace in Go/JS
         autocmd FileType go,javascript inoremap <buffer> {<CR>  {<CR>}<Esc>O
@@ -151,6 +154,10 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
+
+" Go
+au FileType go nmap <Leader>s <Plug>(go-implements)
+au FileType go nmap <Leader>i <Plug>(go-info)
 
 function! RenameFile()
     let old_name = expand('%')
