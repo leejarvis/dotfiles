@@ -30,6 +30,7 @@ set scrolloff=4 		" Start scrolling 4 lines before border
 set splitbelow                  " Open new split pains to bottom
 set splitright                  " and right
 set shortmess+=A                " Disable "ATTENTION" message when a swap file is found
+set mouse=a
 
 set wildignore=log/**
 set wildignore+=tmp/**
@@ -53,8 +54,6 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'slim-template/vim-slim.git'
 Plugin 'tpope/vim-haml'
-Plugin 'mattn/webapi-vim'
-Plugin 'mattn/gist-vim'
 Plugin 'MarcWeber/vim-addon-mw-utils.git'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
@@ -71,10 +70,6 @@ Plugin 'pangloss/vim-javascript'
 " Plugin 'Valloric/YouCompleteMe'
 Plugin 'wting/rust.vim'
 Plugin 'greyblake/vim-preview'
-
-" Gist
-let g:gist_clip_command = 'pbcopy'
-let g:gist_post_private = 1
 
 " CtrlP
 let g:ctrlp_match_window_bottom = 0
@@ -105,8 +100,9 @@ if has("autocmd")
         au BufWritePre *.go :GoImports
         au BufWritePre * :%s/\s\+$//e
 
-        au FileType ruby,haml,sass,scss,coffee,conf,html set sw=2 sts=2
+        au FileType ruby,haml,sass,scss,coffee,conf,html,yaml set sw=2 sts=2
         au FileType javascript setlocal sw=4 sts=4
+        au FileType make setlocal noexpandtab
 
         " Enter closing brace in Go/JS
         autocmd FileType go,javascript inoremap <buffer> {<CR>  {<CR>}<Esc>O
