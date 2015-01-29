@@ -59,6 +59,7 @@ Plugin 'godlygeek/tabular'
 Plugin 'pangloss/vim-javascript'
 " Plugin 'Valloric/YouCompleteMe'
 Plugin 'wting/rust.vim'
+Plugin 'ervandew/supertab'
 
 " CtrlP
 let g:ctrlp_match_window_bottom = 0
