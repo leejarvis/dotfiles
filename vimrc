@@ -1,40 +1,6 @@
-syntax on
-
-set nocompatible 		" Enhance!
-set number 			" Enable line numbers
-set smarttab 			" The best tab is a smart tab
-set ignorecase smartcase 	" Seriously.
-set autoindent 			" Naturally
-set backupdir=~/.tmp 		" Don't clutter backups
-set directory=~/.tmp 		" Don't clutter swaps
-set nowrap 			" Dislike word wrapping
-set autowrite 			" Auto write buffers when leaving
-set autoread 			" Auto read changed files/buffers
-set backspace=indent,eol,start 	" Allow backspace in insert mode
-set showcmd 			" Show command whilst its being typed
-set ruler 		 	" Show cursor at all times
-set showmatch
-set wildmenu 		 	" Enhance command-line completion
-set et 			 	" Expand tabs
-set gdefault 		 	" Add g flag to search/replace
-set noesckeys
-set nofoldenable       	 	" I hate code folding
-set clipboard=unnamed  	 	" Use OS clipboard
-set ttyfast 		 	" Optimize for fast terminal connections
-set cursorline 			" Highlight current line
-set incsearch 			" Whilst we type
-set laststatus=2 		" Always show status line
-set nostartofline 		" Do not reset cursor
-set title 			" Show filename in titlebar
-set scrolloff=4 		" Start scrolling 4 lines before border
-set splitbelow                  " Open new split pains to bottom
-set splitright                  " and right
-set shortmess+=A                " Disable "ATTENTION" message when a swap file is found
-set mouse=a
-
-set wildignore=log/**
-set wildignore+=tmp/**
-set wildignore+=*.png,*.jpg,*.gif
+" vundle
+set nocompatible
+filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
@@ -57,8 +23,43 @@ Plugin 'majutsushi/tagbar'
 Plugin 'groenewege/vim-less'
 Plugin 'godlygeek/tabular'
 Plugin 'pangloss/vim-javascript'
-" Plugin 'Valloric/YouCompleteMe'
 Plugin 'ervandew/supertab'
+
+" tabs/formatting
+set number
+set expandtab
+set ignorecase smartcase
+set autoindent
+
+" searching
+set showmatch
+set incsearch
+set gdefault
+set wildignore=log/**,*.log
+set wildignore+=tmp/**
+set wildignore+=*.png,*.jpg,*.gif
+
+" backups
+set shortmess+=A
+set backupdir=~/.tmp
+set directory=~/.tmp
+
+" buffers/panes
+set autowrite
+set autoread
+set splitbelow
+set splitright
+
+" misc
+set nowrap
+set wildmenu
+set ruler
+set noesckeys
+set clipboard=unnamed           " use OS clipboard
+set backspace=indent,eol,start 	" allow backspace in insert mode
+set showcmd                     " show command whilst its being typed
+set ruler                       " show cursor at all times
+set nofoldenable       	 	" hate code folding
 
 " CtrlP
 let g:ctrlp_match_window_bottom = 0
@@ -84,21 +85,20 @@ if has("autocmd")
         au BufRead,BufNewFile *.coffee set ft=coffee
         au BufRead,BufNewFile *.less set ft=less
         au BufRead,BufNewFile *.slim set ft=slim
-        au BufRead,BufNewFile *.rs set ft=rust
 
         au BufWritePre *.go :GoImports
         au BufWritePre * :%s/\s\+$//e
 
-        au FileType ruby,haml,sass,scss,coffee,conf,html,yaml set sw=2 sts=2
+        au FileType ruby,haml,sass,scss,coffee,conf,html,yaml set sw=2 ts=2 sts=2
         au FileType javascript setlocal sw=4 sts=4
         au FileType make setlocal noexpandtab
 
         " Enter closing brace in Go/JS
-        autocmd FileType go,javascript inoremap <buffer> {<CR>  {<CR>}<Esc>O
+        au FileType go,javascript inoremap <buffer> {<CR>  {<CR>}<Esc>O
 
         au BufWritePost .vimrc source $MYVIMRC
 
-        autocmd BufReadPost *
+        au BufReadPost *
           \ if line("'\"") > 1 && line("'\"") <= line("$") |
           \   exe "normal! g`\"" |
           \ endif
@@ -106,7 +106,6 @@ endif
 
 if has("gui_running")
         set guifont=Bitstream\ Vera\ Sans\ Mono:h15
-        set guioptions-=m
         set guioptions-=T
         colorscheme desert
         set vb t_vb=
@@ -123,18 +122,13 @@ map <Leader>rm :call delete(expand('%')) \| bdelete!<CR>
 map <Leader>gh :Gbrowse<CR>
 map <Leader>gb :Gblame<CR>
 
-" Toggle commenting, current line in normal mode, entire block in visual mode
-" relies on tcomment
+" tcomment toggle, current line in normal mode, entire block in visual mode
 nmap <Leader>c gcc<CR>
 vmap <Leader>c gc<CR>
 
-" Switch tabs like Chrome
-noremap <D-A-Right> :tabn<CR>
-noremap <D-A-Left>  :tabp<CR>
-
-" CMD+Enter to drop to a new line
-inoremap <D-Enter> <Esc>o
-nnoremap <D-Enter> o
+" Switching tabs
+noremap <Leader>n :tabn<CR>
+noremap <Leader>p :tabn<CR>
 
 " Go
 au FileType go nmap <Leader>s <Plug>(go-implements)
