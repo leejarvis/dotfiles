@@ -58,7 +58,6 @@ Plugin 'groenewege/vim-less'
 Plugin 'godlygeek/tabular'
 Plugin 'pangloss/vim-javascript'
 " Plugin 'Valloric/YouCompleteMe'
-Plugin 'wting/rust.vim'
 Plugin 'ervandew/supertab'
 
 " CtrlP
@@ -121,6 +120,8 @@ map <Leader>f mzgg=G`z<CR>
 map <Leader>w caw
 map <Leader>t :TagbarToggle<CR>
 map <Leader>rm :call delete(expand('%')) \| bdelete!<CR>
+map <Leader>gh :Gbrowse<CR>
+map <Leader>gb :Gblame<CR>
 
 " Toggle commenting, current line in normal mode, entire block in visual mode
 " relies on tcomment
