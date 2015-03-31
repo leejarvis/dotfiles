@@ -11,8 +11,8 @@ autoload -U compinit
 compinit
 
 HISTFILE=~/.zsh/history
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=2000
+SAVEHIST=2000
 
 # zsh options
 setopt AUTOCD
