@@ -27,3 +27,4 @@ alias serve="python -m SimpleHTTPServer"
 
 # ruby stuff
 alias be='bundle exec'
+alias fs='foreman s'

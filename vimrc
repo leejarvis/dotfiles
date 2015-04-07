@@ -34,7 +34,6 @@ set autoindent
 " searching
 set showmatch
 set incsearch
-set gdefault
 set wildignore=log/**,*.log
 set wildignore+=tmp/**
 set wildignore+=*.png,*.jpg,*.gif
