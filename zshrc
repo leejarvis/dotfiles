@@ -3,6 +3,8 @@
 export PS1='%~$(git_info_for_prompt)%# '
 export GOPATH=$HOME/code/go
 export PATH="$HOME/bin:/usr/local/bin:/opt/local/bin:/Applications/Postgres.app/Contents/Versions/9.3/bin:/$HOME/code/go/bin:$PATH"
+export VISUAL=vim
+export EDITOR="$VISUAL"
 
 # load functions
 fpath=(~/.zsh/functions $fpath)
