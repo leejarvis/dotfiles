@@ -45,3 +45,4 @@ RUBIES=(~/.rubies/*)
 chruby 2.2
 
 eval "$(direnv hook zsh)"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
