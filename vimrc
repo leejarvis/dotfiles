@@ -1,3 +1,5 @@
+syntax on
+
 " vundle
 set nocompatible
 filetype off
