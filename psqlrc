@@ -1,9 +1,15 @@
+-- Don't display startup message
+\set QUIET 1
+
 \timing on
 
 \pset null '<NULL>'
 
 -- Use extended output automatically
 \x auto
+\set COMP_KEYWORD_CASE upper
 
 -- Don't exit with ctrl-d unless it's pressed 3 times
 \set IGNOREEOF 2
+
+\unset QUIET
