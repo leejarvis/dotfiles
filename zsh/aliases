@@ -22,7 +22,7 @@ alias gm='git merge'
 alias gam='git commit --amend'
 
 alias jsc="/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc"
-
+alias android="~/Library/Android/sdk/tools/emulator -avd Nexus_5_API_21_x86"
 alias serve="python -m SimpleHTTPServer"
 
 # ruby stuff

@@ -26,7 +26,8 @@ Plugin 'groenewege/vim-less'
 Plugin 'godlygeek/tabular'
 Plugin 'pangloss/vim-javascript'
 Plugin 'ervandew/supertab'
-
+Plugin 'keith/swift.vim'
+"
 " tabs/formatting
 set number
 set expandtab
@@ -90,7 +91,7 @@ if has("autocmd")
         au BufWritePre *.go :GoImports
         au BufWritePre * :%s/\s\+$//e
 
-        au FileType ruby,haml,sass,scss,coffee,conf,html,yaml set sw=2 ts=2 sts=2
+        au FileType ruby,haml,sass,scss,coffee,conf,html,yaml,sh set sw=2 ts=2 sts=2
         au FileType javascript setlocal sw=4 sts=4
         au FileType make setlocal noexpandtab
 
