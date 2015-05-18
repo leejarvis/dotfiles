@@ -62,7 +62,6 @@ set backspace=indent,eol,start 	" allow backspace in insert mode
 set showcmd                     " show command whilst its being typed
 set ruler                       " show cursor at all times
 set nofoldenable       	 	" hate code folding
-set cursorline
 
 " CtrlP
 let g:ctrlp_match_window_bottom = 0
@@ -80,6 +79,7 @@ endif
 " Go-vim
 let g:go_fmt_fail_silently = 1
 let g:syntastic_check_on_open = 1
+let g:go_highlight_trailing_whitespace_error = 0
 
 if has("autocmd")
         filetype plugin indent on
