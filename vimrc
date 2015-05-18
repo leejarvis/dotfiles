@@ -62,6 +62,7 @@ set backspace=indent,eol,start 	" allow backspace in insert mode
 set showcmd                     " show command whilst its being typed
 set ruler                       " show cursor at all times
 set nofoldenable       	 	" hate code folding
+set cursorline
 
 " CtrlP
 let g:ctrlp_match_window_bottom = 0
