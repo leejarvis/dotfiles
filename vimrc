@@ -153,3 +153,5 @@ function! RenameFile()
     endif
 endfunction
 map <Leader>rn :call RenameFile()<CR>
+
+command! -bar SyntaxGroup :echo 'Normal '.join(map(synstack(line('.'), col('.')), 'synIDattr(v:val, ''name'')'))
