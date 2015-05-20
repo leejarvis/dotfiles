@@ -96,6 +96,9 @@ if has("autocmd")
         au FileType javascript setlocal sw=4 sts=4
         au FileType make setlocal noexpandtab
 
+        " Disable highlighting coffeescript trailing whitespace
+        hi link coffeeSpaceError NONE
+
         " Always start on first line for git messages
         au FileType gitcommit au! BufEnter COMMIT_EDITMSG call setpos('.', [0, 1, 1, 0])
 
