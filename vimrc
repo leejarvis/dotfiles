@@ -27,6 +27,8 @@ Plugin 'godlygeek/tabular'
 Plugin 'pangloss/vim-javascript'
 Plugin 'ervandew/supertab'
 Plugin 'keith/swift.vim'
+Plugin 'rust-lang/rust.vim'
+
 "
 " tabs/formatting
 set number
@@ -93,6 +95,7 @@ if has("autocmd")
         au BufWritePre * :%s/\s\+$//e
 
         au FileType ruby,haml,sass,scss,coffee,conf,html,yaml,sh set sw=2 ts=2 sts=2
+        au FileType c,cpp set sw=4 ts=4 sts=4
         au FileType javascript setlocal sw=4 sts=4
         au FileType make setlocal noexpandtab
 
