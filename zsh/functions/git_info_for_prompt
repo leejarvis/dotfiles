@@ -1,3 +1,5 @@
+autoload colors; colors;
+
 local g="$(git rev-parse --git-dir 2>/dev/null)"
 if [ -n "$g" ]; then
   local r
@@ -44,12 +46,12 @@ if [ -n "$g" ]; then
 
   s="$(git status --short 2>/dev/null)"
   if [ -n "$s" ]; then
-    r="$r*"
+    r="$r$fg[yellow]*$reset_color"
   fi
 
   if [ -n "$1" ]; then
-    printf "$1" "${b##refs/heads/}$r"
+    printf "$fg[green]$1$reset_color" "${b##refs/heads/}$r"
   else
-    printf "[%s]" "${b##refs/heads/}$r"
+    printf "[$fg[green]%s$reset_color]" "${b##refs/heads/}$r"
   fi
 fi
