@@ -2,6 +2,8 @@ local g="$(git rev-parse --git-dir 2>/dev/null)"
 if [ -n "$g" ]; then
   local r
   local b
+  local s
+
   if [ -d "$g/../.dotest" ]
   then
     if test -f "$g/../.dotest/rebasing"
@@ -39,7 +41,12 @@ if [ -n "$g" ]; then
       fi
     fi
   fi
- 
+
+  s="$(git status --short 2>/dev/null)"
+  if [ -n "$s" ]; then
+    r="$r*"
+  fi
+
   if [ -n "$1" ]; then
     printf "$1" "${b##refs/heads/}$r"
   else
