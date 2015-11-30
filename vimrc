@@ -117,7 +117,7 @@ if has("autocmd")
 endif
 
 if has("gui_running")
-        set guifont=Bitstream\ Vera\ Sans\ Mono:h15
+        set guifont=Menlo:h15
         set guioptions-=T
         colorscheme desert
         set vb t_vb=
@@ -133,6 +133,8 @@ map <Leader>t :TagbarToggle<CR>
 map <Leader>rm :call delete(expand('%')) \| bdelete!<CR>
 map <Leader>gh :Gbrowse<CR>
 map <Leader>gb :Gblame<CR>
+map <Leader>a= :Tab /=<CR>
+map <Leader>a, :Tab /,\zs<CR>
 
 " tcomment toggle, current line in normal mode, entire block in visual mode
 nmap <Leader>c gcc<CR>
