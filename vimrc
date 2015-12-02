@@ -8,7 +8,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 
 Plugin 'gmarik/Vundle.vim'
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'tpope/vim-endwise'
@@ -26,8 +26,6 @@ Plugin 'groenewege/vim-less'
 Plugin 'godlygeek/tabular'
 Plugin 'pangloss/vim-javascript'
 Plugin 'ervandew/supertab'
-Plugin 'keith/swift.vim'
-Plugin 'rust-lang/rust.vim'
 
 "
 " tabs/formatting
@@ -135,6 +133,7 @@ map <Leader>gh :Gbrowse<CR>
 map <Leader>gb :Gblame<CR>
 map <Leader>a= :Tab /=<CR>
 map <Leader>a, :Tab /,\zs<CR>
+map <Leader>a: :Tab /:\zs<CR>
 
 " tcomment toggle, current line in normal mode, entire block in visual mode
 nmap <Leader>c gcc<CR>
