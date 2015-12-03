@@ -26,6 +26,7 @@ Plugin 'groenewege/vim-less'
 Plugin 'godlygeek/tabular'
 Plugin 'pangloss/vim-javascript'
 Plugin 'ervandew/supertab'
+Plugin 'keith/swift.vim'
 
 "
 " tabs/formatting
