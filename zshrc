@@ -1,6 +1,6 @@
 # environmental variables
 
-export PS1='%~$(git_info_for_prompt)%# '
+export PS1='%~%# '
 export GOPATH=$HOME/code/go
 export PATH="$HOME/bin:/usr/local/bin:/opt/local/bin:/Applications/Postgres.app/Contents/Versions/9.3/bin:/$HOME/code/go/bin:$PATH"
 
@@ -12,12 +12,21 @@ bindkey -e
 # load functions
 fpath=(~/.zsh/functions $fpath)
 autoload -U ~/.zsh/functions/*(:t)
-autoload -U compinit
-compinit
+autoload -U compinit && compinit
+autoload -U colors && colors
 
 HISTFILE=~/.zsh/history
 HISTSIZE=2000
 SAVEHIST=2000
+
+# git
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' enable git
+zstyle ':vcs_info:git*' formats "[%{$fg[green]%}%b%{$reset_color%}]"
+zstyle ':vcs_info:git*' actionformats "[%{$fg[green]%}%b%{$reset_color%}(%{$fg[red]%}%a)%{$reset_color%}]"
+precmd() { vcs_info }
+setopt prompt_subst
+PROMPT='%~${vcs_info_msg_0_}%# '
 
 # zsh options
 setopt AUTOCD
