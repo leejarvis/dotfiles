@@ -1,6 +1,5 @@
 # environmental variables
 
-export PS1='%~$(git_info_for_prompt)%# '
 export GOPATH=$HOME/code/go
 export PATH="$HOME/bin:/usr/local/bin:/opt/local/bin:/Applications/Postgres.app/Contents/Versions/9.3/bin:/$HOME/code/go/bin:$PATH"
 
@@ -12,8 +11,8 @@ bindkey -e
 # load functions
 fpath=(~/.zsh/functions $fpath)
 autoload -U ~/.zsh/functions/*(:t)
-autoload -U compinit
-compinit
+autoload -U compinit && compinit
+autoload -U colors && colors
 
 HISTFILE=~/.zsh/history
 HISTSIZE=2000
@@ -36,6 +35,19 @@ setopt APPEND_HISTORY
 setopt INC_APPEND_HISTORY SHARE_HISTORY
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_REDUCE_BLANKS
+setopt PROMPT_SUBST
+
+# prompt
+# http://zsh.sourceforge.net/Doc/Release/User-Contributions.html#Version-Control-Information
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' enable git
+zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:*' unstagedstr "%{$fg[yellow]%} U"
+zstyle ':vcs_info:*' stagedstr "%{$fg[yellow]%} S"
+zstyle ':vcs_info:*' formats "[%{$fg[green]%}%b%u%c%{$reset_color%}]"
+zstyle ':vcs_info:*' actionformats "[%{$fg[green]%}%b%{$reset_color%}(%{$fg[red]%}%a%{$reset_color%})%u%c%{$reset_color%}]"
+precmd() { vcs_info }
+export PROMPT='%~${vcs_info_msg_0_}%# '
 
 source $HOME/.zsh/aliases
 
