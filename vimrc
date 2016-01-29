@@ -91,7 +91,9 @@ if has("autocmd")
         au BufRead,BufNewFile *.slim set ft=slim
 
         au BufWritePre *.go :GoImports
-        au BufWritePre * :%s/\s\+$//e
+
+        let notrimtrailingwhitespace = ['sql']
+        au BufWritePre * if index(notrimtrailingwhitespace, &ft) < 0 | :%s/\s\+$//e
 
         au FileType ruby,haml,sass,scss,coffee,conf,html,yaml,sh set sw=2 ts=2 sts=2
         au FileType c,cpp set sw=4 ts=4 sts=4
