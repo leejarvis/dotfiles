@@ -3,7 +3,7 @@ alias ls='ls -GFh'
 # git
 alias g='git'
 alias s='git status -suall'
-alias co='git checkout'
+# alias co='git checkout' # zsh function added instead
 alias rb='git fetch && git rebase'
 alias d='git diff'
 alias cm='git add -A && git commit -m'

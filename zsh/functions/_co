@@ -1,0 +1,3 @@
+#compdef co
+branches=( ${${(f)"$(git for-each-ref --format='%(refname)' refs/heads)"}#refs/heads/} )
+_describe "git co" branches
