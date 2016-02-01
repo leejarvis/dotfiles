@@ -27,8 +27,8 @@ Plugin 'godlygeek/tabular'
 Plugin 'pangloss/vim-javascript'
 Plugin 'ervandew/supertab'
 Plugin 'keith/swift.vim'
+Plugin 'thoughtbot/vim-rspec'
 
-"
 " tabs/formatting
 set number
 set expandtab
@@ -81,6 +81,9 @@ endif
 let g:go_fmt_fail_silently = 1
 let g:syntastic_check_on_open = 1
 let g:go_highlight_trailing_whitespace_error = 0
+
+" rspec
+let g:rspec_runner = "os_x_iterm"
 
 if has("autocmd")
         filetype plugin indent on
@@ -137,6 +140,10 @@ map <Leader>gb :Gblame<CR>
 map <Leader>a= :Tab /=<CR>
 map <Leader>a, :Tab /,\zs<CR>
 map <Leader>a: :Tab /:\zs<CR>
+
+map <Leader>rs :call RunNearestSpec()<CR>
+map <Leader>ra :call RunCurrentSpecFile()<CR>
+map <Leader>rl :call RunLastSpec()<CR>
 
 " tcomment toggle, current line in normal mode, entire block in visual mode
 nmap <Leader>c gcc<CR>
