@@ -1,0 +1,15 @@
+*.png
+*.pdf
+*.gif
+*.jpg
+*.jpeg
+*.svg
+
+log
+tmp
+vendor
+app/assets/fonts
+public/fonts
+
+app/assets/images
+public/assets
