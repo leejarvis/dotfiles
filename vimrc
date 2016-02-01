@@ -103,6 +103,9 @@ if has("autocmd")
         au FileType javascript setlocal sw=4 sts=4
         au FileType make setlocal noexpandtab
 
+        " don't insert leading # when starting a newline
+        au FileType ruby set formatoptions-=or
+
         " Disable highlighting coffeescript trailing whitespace
         hi link coffeeSpaceError NONE
 
