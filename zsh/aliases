@@ -1,5 +1,7 @@
 alias ls='ls -GFh'
 
+alias irc='ssh jarvo -t "tmux a -t irc"'
+
 # git
 alias g='git'
 alias s='git status -suall'
