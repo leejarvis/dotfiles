@@ -37,9 +37,9 @@ setopt INC_APPEND_HISTORY SHARE_HISTORY
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_REDUCE_BLANKS
 
-source $HOME/.zsh/aliases
-source $HOME/.zsh/prompt
-source $HOME/.zsh/ruby
+source $HOME/.zsh/aliases.zsh
+source $HOME/.zsh/prompt.zsh
+source $HOME/.zsh/ruby.zsh
 
 eval "$(direnv hook zsh)"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
