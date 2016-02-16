@@ -1,1 +1,49 @@
-/Users/lee/Dropbox/Backups/Home/gitconfig
+[user]
+	name = Lee Jarvis
+	email = leejarvis@fastmail.com
+[core]
+        excludesfile = ~/.gitignore
+[color]
+        ui = auto
+[color "branch"]
+        current = yellow reverse
+        local = yellow
+        remote = green
+[color "diff"]
+        meta = yellow bold
+        frag = magenta bold
+        old = red bold
+        new = green bold
+[color "status"]
+        added = yellow
+        changed = green
+        untracked = cyan
+[include]
+        path = ~/.github_gitconfig
+[alias]
+        amend = commit -a --amend
+        cm = commit -m
+        b = branch
+        pl = pull
+        ps = push
+        st = status
+        s = status -s
+        co = checkout
+        who = shortlog -sn
+        d = diff
+        l = log
+        root = rev-parse --show-toplevel
+        cp = cherry-pick
+        rb = rebase
+[merge]
+        tool = vimdiff
+[branch "master"]
+        remote = origin
+        merge = refs/heads/master
+[apply]
+        whitespace = fix
+[push]
+	default = current
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
