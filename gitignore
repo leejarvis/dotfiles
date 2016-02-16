@@ -1,0 +1,6 @@
+log
+restart.txt
+*.swp
+.DS_Store
+.bundle
+.powrc
