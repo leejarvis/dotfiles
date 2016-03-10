@@ -67,6 +67,7 @@ set nofoldenable       	 	" hate code folding
 " CtrlP
 let g:ctrlp_match_window_bottom = 0
 let g:ctrlp_dont_split = 'nerdtree'
+let g:ctrlp_working_path_mode = 0
 imap <C-p> <esc>:CtrlP<CR>
 vmap <C-p> <esc>:CtrlP<CR>
 
