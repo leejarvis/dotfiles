@@ -28,6 +28,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'ervandew/supertab'
 Plugin 'keith/swift.vim'
 Plugin 'thoughtbot/vim-rspec'
+Plugin 'elixir-lang/vim-elixir'
 
 " tabs/formatting
 set number
@@ -96,7 +97,7 @@ if has("autocmd")
 
         au BufWritePre *.go :GoImports
 
-        let notrimtrailingwhitespace = ['sql']
+        let notrimtrailingwhitespace = ['sql', 'svg']
         au BufWritePre * if index(notrimtrailingwhitespace, &ft) < 0 | :%s/\s\+$//e
 
         au FileType ruby,haml,sass,scss,coffee,conf,html,yaml,sh set sw=2 ts=2 sts=2
@@ -142,6 +143,7 @@ map <Leader>rm :call delete(expand('%')) \| bdelete!<CR>
 map <Leader>gh :Gbrowse<CR>
 map <Leader>gb :Gblame<CR>
 map <Leader>a= :Tab /=<CR>
+map <Leader>a> :Tab /=><CR>
 map <Leader>a, :Tab /,\zs<CR>
 map <Leader>a: :Tab /:\zs<CR>
 
