@@ -1,6 +1,18 @@
-servers = ( );
-chatnets = { };
-channels = ( );
+servers = (
+  {
+    address = "irc.freenode.net";
+    chatnet = "freenode";
+    port = "6697";
+    use_ssl = "yes";
+    ssl_verify = "no";
+    autoconnect = "yes";
+  }
+);
+chatnets = { freenode = { type = "IRC"; }; };
+channels = (
+  { name = "#ruby"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#elixir-lang"; chatnet = "freenode"; autojoin = "yes"; }
+);
 aliases = { c = "clear"; };
 
 statusbar = {
@@ -117,6 +129,7 @@ statusbar = {
 settings = {
   core = { real_name = "Lee"; user_name = "lee"; nick = "ljarvis"; };
   "fe-text" = { actlist_sort = "refnum"; };
+  "fe-common/core" = { use_status_window = "no"; };
 };
 ignores = ( { level = "JOINS PARTS QUITS NICKS"; } );
 hilights = ( { text = "ljarvis"; nick = "yes"; word = "yes"; } );
