@@ -1,0 +1,22 @@
+#!/usr/bin/env ruby
+
+if ARGV.empty?
+  abort "Need a title"
+end
+
+ROOT = "/Users/lee/Dropbox/Documents/Journal"
+CMD  = "/Applications/Typora.app/Contents/MacOS/Typora"
+
+date  = Time.now.strftime("%Y-%M-%d")
+title = ARGV[0]
+
+filename = "#{date}_#{title.downcase.gsub(/[^a-zA-Z0-9 ]/, '').gsub(/\s+/, '-')}.md"
+path     = File.join(ROOT, filename)
+
+if File.file?(path)
+  abort "File exists"
+end
+
+File.write(path, "# #{title}\n")
+
+`#{CMD} #{path} &`

@@ -25,7 +25,7 @@ Plugin 'groenewege/vim-less'
 Plugin 'godlygeek/tabular'
 Plugin 'pangloss/vim-javascript'
 Plugin 'ervandew/supertab'
-Plugin 'thoughtbot/vim-rspec'
+Plugin 'janko-m/vim-test'
 Plugin 'elixir-lang/vim-elixir'
 
 " tabs/formatting
@@ -136,7 +136,6 @@ map <Leader>b :NERDTreeToggle<CR>
 map <Leader>l :b#<CR>
 map <Leader>f mzgg=G`z<CR>
 map <Leader>w caw
-map <Leader>t :TagbarToggle<CR>
 map <Leader>rm :call delete(expand('%')) \| bdelete!<CR>
 map <Leader>gh :Gbrowse<CR>
 map <Leader>gb :Gblame<CR>
@@ -145,9 +144,7 @@ map <Leader>a> :Tab /=><CR>
 map <Leader>a, :Tab /,\zs<CR>
 map <Leader>a: :Tab /:\zs<CR>
 
-map <Leader>rs :call RunNearestSpec()<CR>
-map <Leader>ra :call RunCurrentSpecFile()<CR>
-map <Leader>rl :call RunLastSpec()<CR>
+nmap <silent> <leader>t :TestNearest<CR>
 
 " tcomment toggle, current line in normal mode, entire block in visual mode
 nmap <Leader>c gcc<CR>
