@@ -2,7 +2,7 @@
 
 require "date"
 
-ALLOWANCE = 10_000 # per year
+ALLOWANCE = 12_500 # per year
 DATE      = Date.new(2016, 5, 20)
 
 daily_allowance = ALLOWANCE / 365
