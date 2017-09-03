@@ -21,7 +21,7 @@ def decide_filename(path, shorten: false)
   elsif name.start_with?("Screen Shot")
     name.scan(/\d+/).join("") + ext
   else
-    name
+    name.gsub(/\s+/, "_")
   end
 end
 

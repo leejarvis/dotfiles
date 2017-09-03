@@ -92,6 +92,7 @@ if has("autocmd")
         au BufRead,BufNewFile *.coffee set ft=coffee
         au BufRead,BufNewFile *.less set ft=less
         au BufRead,BufNewFile *.slim set ft=slim
+        au BufRead,BufNewFile *.geojson set ft=json
 
         au BufWritePre *.go :GoImports
 
