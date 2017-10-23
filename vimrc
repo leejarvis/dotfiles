@@ -65,6 +65,7 @@ set ruler                       " show cursor at all times
 set nofoldenable       	 	" hate code folding
 
 imap <C-p> <esc>:FZF<CR>
+nmap <C-p> <esc>:FZF<CR>
 vmap <C-p> <esc>:FZF<CR>
 
 " Go-vim
