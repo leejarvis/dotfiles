@@ -1,34 +1,32 @@
-syntax on
+call plug#begin('~/.vim/plugged')
 
-" vundle
-set nocompatible
-filetype off
+Plug 'gmarik/Vundle.vim'
+Plug 'kchmck/vim-coffee-script'
+Plug 'tomtom/tcomment_vim'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-rails'
+Plug 'vim-ruby/vim-ruby'
+Plug 'slim-template/vim-slim.git'
+Plug 'tpope/vim-haml'
+Plug 'scrooloose/syntastic'
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-fugitive'
+Plug 'fatih/vim-go'
+Plug 'majutsushi/tagbar'
+Plug 'groenewege/vim-less'
+Plug 'godlygeek/tabular'
+Plug 'pangloss/vim-javascript'
+Plug 'ervandew/supertab'
+Plug 'janko-m/vim-test'
+Plug 'elixir-lang/vim-elixir'
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
 
-set rtp+=~/.vim/bundle/Vundle.vim
+call plug#end()
+
 set rtp+=/usr/local/opt/fzf
-call vundle#rc()
 
-Plugin 'gmarik/Vundle.vim'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'tomtom/tcomment_vim'
-Plugin 'tpope/vim-endwise'
-Plugin 'tpope/vim-rails'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'slim-template/vim-slim.git'
-Plugin 'tpope/vim-haml'
-Plugin 'scrooloose/syntastic'
-Plugin 'scrooloose/nerdtree'
-Plugin 'tpope/vim-fugitive'
-Plugin 'fatih/vim-go'
-Plugin 'majutsushi/tagbar'
-Plugin 'groenewege/vim-less'
-Plugin 'godlygeek/tabular'
-Plugin 'pangloss/vim-javascript'
-Plugin 'ervandew/supertab'
-Plugin 'janko-m/vim-test'
-Plugin 'elixir-lang/vim-elixir'
-Plugin 'junegunn/fzf'
-Plugin 'junegunn/fzf.vim'
+syntax on
 
 " tabs/formatting
 set number
@@ -66,8 +64,9 @@ set ruler                       " show cursor at all times
 set nofoldenable       	 	" hate code folding
 
 " FZF
+let g:fzf_layout = { 'up': '~20%' }
 imap <C-p> <esc>:FZF<CR>
-nmap <C-p> <esc>:FZF<CR>
+nmap <C-p> :FZF<CR>
 vmap <C-p> <esc>:FZF<CR>
 
 " Go-vim
