@@ -72,9 +72,6 @@ let g:go_fmt_fail_silently = 1
 let g:syntastic_check_on_open = 1
 let g:go_highlight_trailing_whitespace_error = 0
 
-" rspec
-let g:rspec_runner = "os_x_iterm2"
-
 if has("autocmd")
         filetype plugin indent on
 
