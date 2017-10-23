@@ -28,6 +28,7 @@ Plugin 'ervandew/supertab'
 Plugin 'janko-m/vim-test'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
 
 " tabs/formatting
 set number
@@ -64,6 +65,7 @@ set showcmd                     " show command whilst its being typed
 set ruler                       " show cursor at all times
 set nofoldenable       	 	" hate code folding
 
+" FZF
 imap <C-p> <esc>:FZF<CR>
 nmap <C-p> <esc>:FZF<CR>
 vmap <C-p> <esc>:FZF<CR>
