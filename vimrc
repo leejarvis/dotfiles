@@ -5,10 +5,10 @@ set nocompatible
 filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=/usr/local/opt/fzf
 call vundle#rc()
 
 Plugin 'gmarik/Vundle.vim'
-Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'tpope/vim-endwise'
@@ -27,6 +27,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'ervandew/supertab'
 Plugin 'janko-m/vim-test'
 Plugin 'elixir-lang/vim-elixir'
+Plugin 'junegunn/fzf'
 
 " tabs/formatting
 set number
@@ -63,19 +64,8 @@ set showcmd                     " show command whilst its being typed
 set ruler                       " show cursor at all times
 set nofoldenable       	 	" hate code folding
 
-" CtrlP
-let g:ctrlp_match_window_bottom = 0
-let g:ctrlp_dont_split = 'nerdtree'
-let g:ctrlp_working_path_mode = 0
-imap <C-p> <esc>:CtrlP<CR>
-vmap <C-p> <esc>:CtrlP<CR>
-
-" Use Silver Searcher if possible
-if executable("ag")
-        set grepprg=ag
-        let g:ctrlp_user_command = "ag %s -l --nocolor -g ''"
-        let g:ctrlp_use_caching = 0
-endif
+imap <C-p> <esc>:FZF<CR>
+vmap <C-p> <esc>:FZF<CR>
 
 " Go-vim
 let g:go_fmt_fail_silently = 1
