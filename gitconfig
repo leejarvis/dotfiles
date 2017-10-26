@@ -36,7 +36,7 @@
         cp = cherry-pick
         rb = rebase
 [merge]
-        tool = vimdiff
+	tool = vimdiff
 [branch "master"]
         remote = origin
         merge = refs/heads/master
@@ -49,3 +49,8 @@
 	smudge = git-media-smudge %f
 [credential]
 	helper = osxkeychain
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
