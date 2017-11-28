@@ -1,7 +1,7 @@
 # environmental variables
 
 export GOPATH=$HOME/code/go
-export PATH="$HOME/bin:/usr/local/bin:/opt/local/bin:/Applications/Postgres.app/Contents/Versions/latest/bin:/$HOME/code/go/bin:$PATH"
+export PATH="$HOME/bin:/usr/local/bin:/opt/local/bin:/Applications/Postgres.app/Contents/Versions/9.6/bin:$PATH"
 
 export VISUAL=vim
 export EDITOR=$VISUAL
