@@ -27,7 +27,7 @@ end
 
 filename = decide_filename(path)
 newpath  = "public/u/#{filename}"
-url      = "https://jarvo.tech/u/#{filename}"
+url      = "https://leejarvis.me/u/#{filename}"
 
 `echo "#{url}" | pbcopy`
 `scp "#{path}" jarvo:#{newpath}`
