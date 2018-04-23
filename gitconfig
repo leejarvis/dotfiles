@@ -3,6 +3,7 @@
 	email = leejarvis@fastmail.com
 [core]
         excludesfile = ~/.gitignore
+	editor = code --wait
 [color]
         ui = auto
 [color "branch"]
