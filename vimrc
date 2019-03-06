@@ -53,7 +53,7 @@ set splitbelow
 set splitright
 
 " misc
-set nowrap
+
 set wildmenu
 set ruler
 set noesckeys

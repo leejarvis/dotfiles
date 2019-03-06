@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+# Thanks Aaron
+# https://twitter.com/tenderlove/status/1032299379707863040?lang=en
+
+text = ARGV.shift or abort "sbanner <text> <emoji>"
+emoji = ARGV.shift or abort "sbanner <text> <emoji>"
+
+`figlet -f banner "#{text}" | sed -e's/#/:#{emoji}:/g' | sed -e's/ /:blank:/g' | pbcopy`
