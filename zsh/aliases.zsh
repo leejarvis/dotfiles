@@ -1,6 +1,6 @@
 alias ls='ls -GFh'
 
-alias irc='ssh jarvo -t "tmux a -t irc"'
+alias irc='tmux a -t irc'
 
 alias cl='c loco2/loco2'
 

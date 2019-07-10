@@ -4,3 +4,4 @@ restart.txt
 .DS_Store
 .bundle
 .powrc
+.elixir_ls/
