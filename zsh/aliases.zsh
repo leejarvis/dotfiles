@@ -1,8 +1,6 @@
 alias ls='ls -GFh'
 
-alias irc='tmux a -t irc'
-
-alias cl='c loco2/loco2'
+alias irc='ssh leejarvis.me -t "tmux a -t irc"'
 
 # git
 alias g='git'
