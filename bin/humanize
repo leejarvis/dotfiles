@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+
+GEM_NAME = "humanize"
+
+begin
+  gem GEM_NAME
+rescue Gem::LoadError
+  Gem.install(GEM_NAME)
+  gem GEM_NAME
+end
+
+require GEM_NAME
+
+if ARGV.empty?
+  abort "humanize <number>"
+end
+
+puts Integer(ARGV.first).humanize
