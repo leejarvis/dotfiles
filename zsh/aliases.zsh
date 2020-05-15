@@ -27,3 +27,8 @@ alias gam='git commit --amend'
 alias be='bundle exec'
 alias fs='foreman s'
 alias rc='rails console'
+
+# elixir
+alias mx='mix'
+alias mxx='mix test'
+alias phx='iex -S mix phx.server'
