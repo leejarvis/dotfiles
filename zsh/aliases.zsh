@@ -32,3 +32,5 @@ alias rc='rails console'
 alias mx='mix'
 alias mxx='mix test'
 alias phx='iex -S mix phx.server'
+
+alias ag="echo 'you mean rg'"
