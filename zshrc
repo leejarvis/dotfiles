@@ -46,3 +46,17 @@ export FZF_DEFAULT_COMMAND='rg --files --hidden --glob \!.git'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 if which spark-ansible > /dev/null; then source /etc/ansible/scripts/spark-autocomplete.sh; fi
 export SPARK_USER=lee.jarvis
+
+# Use a different homebrew inside m1 terminal
+if [[ $OSTYPE == darwin* && $CPUTYPE == arm64 ]]; then
+  export HOMEBREW_PREFIX="/opt/homebrew"
+  export HOMEBREW_CELLAR="/opt/homebrew/Cellar"
+  export HOMEBREW_REPOSITORY="/opt/homebrew"
+  export PATH="/opt/homebrew/bin:/opt/homebrew/sbin${PATH+:$PATH}"
+  export MANPATH="/opt/homebrew/share/man${MANPATH+:$MANPATH}:"
+  export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}"
+fi
+
+if which spark-ansible > /dev/null; then source /etc/ansible/scripts/spark-autocomplete.sh; fi
+
+. /usr/local/opt/asdf/libexec/asdf.sh
