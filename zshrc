@@ -55,8 +55,6 @@ if [[ $OSTYPE == darwin* && $CPUTYPE == arm64 ]]; then
   export PATH="/opt/homebrew/bin:/opt/homebrew/sbin${PATH+:$PATH}"
   export MANPATH="/opt/homebrew/share/man${MANPATH+:$MANPATH}:"
   export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}"
+
+  . /usr/local/opt/asdf/libexec/asdf.sh
 fi
-
-if which spark-ansible > /dev/null; then source /etc/ansible/scripts/spark-autocomplete.sh; fi
-
-. /usr/local/opt/asdf/libexec/asdf.sh
