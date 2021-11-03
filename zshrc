@@ -38,7 +38,6 @@ setopt HIST_REDUCE_BLANKS
 
 source $HOME/.zsh/aliases.zsh
 source $HOME/.zsh/prompt.zsh
-source $HOME/.zsh/ruby.zsh
 source $HOME/.zsh/apple_terminal.zsh
 
 eval "$(direnv hook zsh)"
