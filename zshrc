@@ -58,3 +58,5 @@ if [[ $OSTYPE == darwin* && $CPUTYPE == arm64 ]]; then
 
   . /usr/local/opt/asdf/libexec/asdf.sh
 fi
+
+[ -f $HOME/.asdf/asdf.sh ] && . $HOME/.asdf/asdf.sh
