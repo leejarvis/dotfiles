@@ -39,12 +39,11 @@ setopt HIST_REDUCE_BLANKS
 source $HOME/.zsh/aliases.zsh
 source $HOME/.zsh/prompt.zsh
 source $HOME/.zsh/apple_terminal.zsh
+source $HOME/.zsh/spark.zsh
 
 eval "$(direnv hook zsh)"
 export FZF_DEFAULT_COMMAND='rg --files --hidden --glob \!.git'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-if which spark-ansible > /dev/null; then source /etc/ansible/scripts/spark-autocomplete.sh; fi
-export SPARK_USER=lee.jarvis
 
 # Use a different homebrew inside m1 terminal
 if [[ $OSTYPE == darwin* && $CPUTYPE == arm64 ]]; then
