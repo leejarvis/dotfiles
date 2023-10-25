@@ -1,6 +1,7 @@
 # environmental variables
 
-export PATH="$HOME/bin:/usr/local/bin:/opt/local/bin:$PATH"
+export PATH="$HOME/bin:$HOME/.asdf/bin:/usr/local/bin:/opt/local/bin:$PATH"
+export PATH="/opt/homebrew/opt/python/libexec/bin:$PATH"
 
 export VISUAL=vim
 export EDITOR=$VISUAL
@@ -56,3 +57,4 @@ if [[ $OSTYPE == darwin* && $CPUTYPE == arm64 ]]; then
 fi
 
 [ -f $HOME/.asdf/asdf.sh ] && . $HOME/.asdf/asdf.sh
+if which spark-ansible > /dev/null; then source /etc/ansible/scripts/spark-autocomplete.sh; fi

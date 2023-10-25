@@ -1,6 +1,6 @@
 [user]
 	name = Lee Jarvis
-	email = leejarvis@fastmail.com
+	email = lee@jrvs.uk
 [core]
         excludesfile = ~/.gitignore
 	editor = code --wait
@@ -58,3 +58,5 @@
 	required = true
 [init]
 	defaultBranch = main
+[pull]
+	rebase = true

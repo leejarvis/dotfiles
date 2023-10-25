@@ -8,3 +8,4 @@ vim/.netrwhist
 vim/bundle
 vim/plugged
 bin/terraform
+bin/blah
