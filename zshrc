@@ -16,8 +16,8 @@ autoload -U compinit && compinit
 autoload -U colors && colors
 
 HISTFILE=~/.zsh/history
-HISTSIZE=5000
-SAVEHIST=5000
+HISTSIZE=50000
+SAVEHIST=50000
 
 # zsh options
 setopt AUTOCD
