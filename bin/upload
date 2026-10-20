@@ -1,0 +1,57 @@
+#!/bin/zsh
+
+# Usage: upload [-r] path/to/file.png
+#        upload --rm <filename or url>
+#   -r    suffix the filename with a random string (file-1a2b3c4d.png)
+#   --rm  delete a previously uploaded file
+
+if [[ "$1" == "--rm" ]]; then
+  if [[ -z "$2" ]]; then
+    echo "Usage: $0 --rm <filename or url>"
+    exit 1
+  fi
+
+  filename="$(basename "$2")"
+  rclone deletefile "r2:jrvs/$filename" || exit 1
+  echo "Deleted: https://r2.jrvs.uk/$filename"
+  exit 0
+fi
+
+random_suffix=false
+while getopts "r" opt; do
+  case $opt in
+    r) random_suffix=true ;;
+    *) echo "Usage: $0 [-r] <file>"; exit 1 ;;
+  esac
+done
+shift $((OPTIND - 1))
+
+if [[ -z "$1" ]]; then
+  echo "Usage: $0 [-r] <file>"
+  exit 1
+fi
+
+file_path="$1"
+filename="$(basename "$file_path")"
+
+if $random_suffix; then
+  suffix="$(openssl rand -hex 4)"
+  if [[ -n "${filename:e}" ]]; then
+    filename="${filename:r}-$suffix.${filename:e}"
+  else
+    filename="$filename-$suffix"
+  fi
+fi
+
+# Upload to R2
+echo "Uploading $filename..."
+rclone copyto --progress "$file_path" "r2:jrvs/$filename" || exit 1
+
+# Build URL
+url="https://r2.jrvs.uk/$filename"
+
+# Copy to clipboard (macOS)
+echo "$url" | pbcopy
+
+# Output for confirmation
+echo "Uploaded and copied to clipboard: $url"

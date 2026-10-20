@@ -1,6 +1,6 @@
 # environmental variables
 
-export PATH="$HOME/bin:$HOME/.asdf/bin:/usr/local/bin:/opt/local/bin:$PATH"
+export PATH="$HOME/bin:/usr/local/bin:/opt/local/bin:$PATH"
 export PATH="/opt/homebrew/opt/python/libexec/bin:$PATH"
 
 export VISUAL=vim
@@ -42,7 +42,7 @@ source $HOME/.zsh/prompt.zsh
 source $HOME/.zsh/apple_terminal.zsh
 source $HOME/.zsh/spark.zsh
 
-eval "$(direnv hook zsh)"
+# eval "$(direnv hook zsh)"
 export FZF_DEFAULT_COMMAND='rg --files --hidden --glob \!.git'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -56,5 +56,14 @@ if [[ $OSTYPE == darwin* && $CPUTYPE == arm64 ]]; then
   export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}"
 fi
 
-[ -f $HOME/.asdf/asdf.sh ] && . $HOME/.asdf/asdf.sh
+# [ -f $HOME/.asdf/asdf.sh ] && . $HOME/.asdf/asdf.sh
+eval "$(mise activate zsh)"
 if which spark-ansible > /dev/null; then source /etc/ansible/scripts/spark-autocomplete.sh; fi
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+export ERL_AFLAGS="-kernel shell_history enabled"
+
+. "$HOME/.local/bin/env"

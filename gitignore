@@ -1,7 +1,6 @@
-log
-restart.txt
-*.swp
-.DS_Store
-.bundle
-.powrc
-.elixir_ls/
+
+
+# HubSpot config file
+hubspot.config.yml
+
+**/.claude/settings.local.json

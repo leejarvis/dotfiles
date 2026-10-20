@@ -3,7 +3,7 @@
 	email = lee@jrvs.uk
 [core]
         excludesfile = ~/.gitignore
-	editor = code --wait
+	editor = nvim
 [color]
         ui = auto
 [color "branch"]
@@ -36,6 +36,7 @@
         root = rev-parse --show-toplevel
         cp = cherry-pick
         rb = rebase
+        count = rev-list --count HEAD
 [merge]
 	tool = vimdiff
 	conflictStyle = diff3
